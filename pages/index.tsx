@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaPhone, FaArrowRight } from 'react-icons/fa';
 import { Button } from '../components/common/styles';
 import Link from 'next/link';
+import Header from '../components/Header'; // Import the shared Header component
 
 const HeroSection = styled.div`
   background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary} 0%, ${({ theme }) => theme.colors.secondary} 100%);
@@ -99,10 +100,10 @@ const FeatureGrid = styled.div`
 
 const FeatureCard = styled(motion.div)`
   background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: ${({ theme }) => theme.borderRadius?.medium || '0.375rem'};
+  box-shadow: ${({ theme }) => theme.shadows?.medium || '0 4px 20px rgba(0, 0, 0, 0.08)'};
   padding: 2rem;
-  transition: ${({ theme }) => theme.transition};
+  transition: ${({ theme }) => theme.transitions?.normal || 'all 0.3s ease-in-out'};
   
   &:hover {
     transform: translateY(-5px);
@@ -215,41 +216,6 @@ const LightButton = styled(LargeButton)`
   }
 `;
 
-// Navigation Menu
-const NavBar = styled.nav`
-  background-color: ${({ theme }) => theme.colors.dark};
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const Logo = styled.div`
-  font-size: 1.25rem;
-  font-weight: 700;
-`;
-
-const NavLinks = styled.div`
-  display: flex;
-  gap: 1.5rem;
-  
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: none;
-  }
-`;
-
-const NavLink = styled.a`
-  color: white;
-  text-decoration: none;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-  
-  &:hover {
-    opacity: 1;
-  }
-`;
-
 // Prize Table
 const PrizeTable = styled.div`
   margin-top: 2rem;
@@ -260,8 +226,8 @@ const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   background-color: white;
-  border-radius: ${({ theme }) => theme.borderRadius};
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: ${({ theme }) => theme.borderRadius?.medium || '0.375rem'};
+  box-shadow: ${({ theme }) => theme.shadows?.medium || '0 4px 20px rgba(0, 0, 0, 0.08)'};
 `;
 
 const TableHead = styled.thead`
@@ -293,36 +259,8 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Participate in MTN MyNumba Don Win promotion and get a chance to win amazing prizes!" />
       </Head>
       
-      {/* Navigation Menu */}
-      <NavBar>
-        <Logo>MTN MyNumba Don Win</Logo>
-        <NavLinks>
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/prizes">Prizes</NavLink>
-          <NavLink href="/winners">Winners</NavLink>
-          <NavLink href="/livestream">Livestream</NavLink>
-          <NavLink href="/dashboard">Dashboard</NavLink>
-          <NavLink href="/faq">FAQ</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
-        </NavLinks>
-        <div style={{ display: 'flex', gap: '1rem' }}>
-          <Link href="/dashboard" passHref>
-            <NavLink style={{ display: 'flex', alignItems: 'center' }}>Dashboard</NavLink>
-          </Link>
-          <Link href="/login" passHref>
-            <NavLink style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              background: '#FFCC00', 
-              color: '#333',
-              padding: '0.5rem 1rem',
-              borderRadius: '4px',
-              fontWeight: 'bold'
-            }}>Login</NavLink>
-          </Link>
-        </div>
-      </NavBar>
+      {/* Use the shared Header component instead of custom NavBar */}
+      <Header />
       
       <HeroSection>
         <HeroPattern />
@@ -532,3 +470,4 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+
