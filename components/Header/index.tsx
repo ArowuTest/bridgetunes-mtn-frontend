@@ -125,14 +125,24 @@ const ButtonGroup = styled.div`
   gap: 1rem;
   
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin-top: auto;
+    display: none;
+  }
+`;
+
+const MobileButtonGroup = styled.div`
+  display: none;
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: flex;
     flex-direction: column;
+    gap: 1rem;
+    margin-top: auto;
   }
 `;
 
 const Button = styled.a`
   padding: 0.5rem 1.5rem;
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: ${({ theme }) => theme.borderRadius?.small || '0.25rem'};
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s;
@@ -144,7 +154,7 @@ const Button = styled.a`
 
 const PrimaryButton = styled(Button)`
   background-color: ${({ theme }) => theme.colors.primary};
-  color: white;
+  color: ${({ theme }) => theme.colors.dark};
   
   &:hover {
     background-color: ${({ theme }) => theme.colors.primaryDark};
@@ -251,7 +261,7 @@ const Header: React.FC = () => {
           </Link>
         </ButtonGroup>
         
-        <MobileMenuButton onClick={toggleMobileMenu}>
+        <MobileMenuButton onClick={toggleMobileMenu} aria-label="Open menu">
           <FaBars />
         </MobileMenuButton>
       </HeaderContent>
@@ -261,7 +271,7 @@ const Header: React.FC = () => {
       <MobileMenu isOpen={isMobileMenuOpen}>
         <MobileMenuHeader>
           <Logo>Menu</Logo>
-          <MobileMenuClose onClick={closeMobileMenu}>
+          <MobileMenuClose onClick={closeMobileMenu} aria-label="Close menu">
             <FaTimes />
           </MobileMenuClose>
         </MobileMenuHeader>
@@ -293,7 +303,7 @@ const Header: React.FC = () => {
           </Link>
         </MobileNavLinks>
         
-        <ButtonGroup>
+        <MobileButtonGroup>
           <Link href="/dashboard" passHref>
             <SecondaryButton onClick={closeMobileMenu}>
               Dashboard
@@ -305,10 +315,11 @@ const Header: React.FC = () => {
               Login
             </PrimaryButton>
           </Link>
-        </ButtonGroup>
+        </MobileButtonGroup>
       </MobileMenu>
     </HeaderContainer>
   );
 };
 
 export default Header;
+
