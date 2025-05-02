@@ -3,6 +3,7 @@ import Head from "next/head"
 import styled from "styled-components"
 import Layout from "../components/Layout/layout"
 import OptInForm from "../components/OptIn/OptInForm"
+import { OptInScreen } from "../screens/opt-in/opt-in-screen"
 
 const OptInContainer = styled.div`
   padding: 1.5rem;
@@ -17,9 +18,7 @@ const OptInPage: React.FC = () => {
         <title>Opt-In | MTN MyNumba Don Win</title>
       </Head>
 
-      <OptInContainer>
-        <OptInForm />
-      </OptInContainer>
+      <OptInScreen />
     </Layout>
   )
 }
