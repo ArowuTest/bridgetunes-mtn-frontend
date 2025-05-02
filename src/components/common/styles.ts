@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 // ================= LAYOUT PRIMITIVES =================
 export const Container = styled.div`
@@ -9,24 +9,24 @@ export const Container = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 100%;
-    padding: 0 2rem;
+    padding: 0;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 1rem;
+    padding: 0;
   }
 `
 
 export const Flex = styled.div<{
-  direction?: "row" | "column";
-  justify?: string;
-  align?: string;
-  gap?: string;
-  backgroundImage?: string;
-  background?: string;
-  hasCustomBG?: boolean;
-  backgroundPattern?: string;
-  backgroundColor?: string;
+  direction?: "row" | "column"
+  justify?: string
+  align?: string
+  gap?: string
+  backgroundImage?: string
+  background?: string
+  hasCustomBG?: boolean
+  backgroundPattern?: string
+  backgroundColor?: string
 }>`
   display: flex;
   position: relative; // Add this
@@ -61,7 +61,7 @@ export const Flex = styled.div<{
       pointer-events: none;
     }
   `}
-`;
+`
 
 export const Grid = styled.div`
   display: grid;
@@ -71,16 +71,16 @@ export const Grid = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
   }
-`;
+`
 
 export const Col = styled.div<{ span?: number }>`
   grid-column: span ${({ span }) => span || 12};
-`;
+`
 
 // ================= FORM ELEMENTS =================
 export const Form = styled.form`
   width: 100%;
-`;
+`
 
 export const Input = styled.input`
   width: 100%;
@@ -96,7 +96,7 @@ export const Input = styled.input`
     border-color: ${({ theme }) => theme.colors.primary};
     box-shadow: 0 0 0 3px ${({ theme }) => `${theme.colors.primary}30`};
   }
-`;
+`
 
 export const Textarea = styled.textarea`
   width: 100%;
@@ -131,29 +131,29 @@ export const Select = styled.select`
     border-color: ${({ theme }) => theme.colors.primary};
     box-shadow: 0 0 0 3px ${({ theme }) => `${theme.colors.primary}30`};
   }
-`;
+`
 
 export const FormGroup = styled.div`
   margin-bottom: 1rem;
-`;
+`
 
 export const Label = styled.label`
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-`;
+`
 
 // ================= COMPONENTS =================
 export const Button = styled.button<{
-  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
-  color?: string;
-  padding?: string;
-  margin?: string;
-  borderRadius?: string;
-  fontFamily?: string;
-  backgroundColor?: string;
-  border?: string;
-  fontSize?: string;
+  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info"
+  color?: string
+  padding?: string
+  margin?: string
+  borderRadius?: string
+  fontFamily?: string
+  backgroundColor?: string
+  border?: string
+  fontSize?: string
 }>`
   display: inline-block;
   padding: ${({ padding }) => padding || "0.6rem 1.1rem"};
@@ -166,29 +166,29 @@ export const Button = styled.button<{
   transition: ${({ theme }) =>
     theme.transitions?.normal || "all 0.3s ease-in-out"};
   background-color: ${({ theme, variant, backgroundColor }) => {
-    if (backgroundColor) return backgroundColor;
+    if (backgroundColor) return backgroundColor
     switch (variant) {
       case "secondary":
-        return theme.colors.secondary;
+        return theme.colors.secondary
       case "success":
-        return theme.colors.success;
+        return theme.colors.success
       case "danger":
-        return theme.colors.danger;
+        return theme.colors.danger
       case "warning":
-        return theme.colors.warning;
+        return theme.colors.warning
       case "info":
-        return theme.colors.info;
+        return theme.colors.info
       default:
-        return theme.colors.primary;
+        return theme.colors.primary
     }
   }};
   color: ${({ theme, variant, color }) => {
-    if (color) return color;
+    if (color) return color
     switch (variant) {
       case "warning":
-        return theme.colors.dark;
+        return theme.colors.dark
       default:
-        return theme.colors.black;
+        return theme.colors.black
     }
   }};
 
@@ -200,7 +200,7 @@ export const Button = styled.button<{
     opacity: 0.6;
     cursor: not-allowed;
   }
-`;
+`
 
 export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
@@ -209,17 +209,17 @@ export const Card = styled.div`
     theme.shadows?.medium || "0 4px 6px rgba(0, 0, 0, 0.1)"};
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-`;
+`
 
 export const CardTitle = styled.h2`
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: ${({ theme }) => theme.colors.dark};
-`;
+`
 
 export const Badge = styled.span<{
-  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
+  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info"
 }>`
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -232,40 +232,40 @@ export const Badge = styled.span<{
   background-color: ${({ theme, variant = "primary" }) => {
     switch (variant) {
       case "secondary":
-        return theme.colors.secondaryLight;
+        return theme.colors.secondaryLight
       case "success":
-        return theme.colors.successLight;
+        return theme.colors.successLight
       case "danger":
-        return theme.colors.dangerLight;
+        return theme.colors.dangerLight
       case "warning":
-        return theme.colors.warningLight;
+        return theme.colors.warningLight
       case "info":
-        return theme.colors.infoLight;
+        return theme.colors.infoLight
       default:
-        return theme.colors.primaryLight;
+        return theme.colors.primaryLight
     }
   }};
 
   color: ${({ theme, variant = "primary" }) => {
     switch (variant) {
       case "secondary":
-        return theme.colors.secondaryDark;
+        return theme.colors.secondaryDark
       case "success":
-        return theme.colors.successDark;
+        return theme.colors.successDark
       case "danger":
-        return theme.colors.dangerDark;
+        return theme.colors.dangerDark
       case "warning":
-        return theme.colors.warningDark;
+        return theme.colors.warningDark
       case "info":
-        return theme.colors.infoDark;
+        return theme.colors.infoDark
       default:
-        return theme.colors.primaryDark;
+        return theme.colors.primaryDark
     }
   }};
-`;
+`
 
 export const Alert = styled.div<{
-  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
+  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info"
 }>`
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
@@ -273,36 +273,36 @@ export const Alert = styled.div<{
   background-color: ${({ theme, variant }) => {
     switch (variant) {
       case "secondary":
-        return `${theme.colors.secondary}20`;
+        return `${theme.colors.secondary}20`
       case "success":
-        return `${theme.colors.success}20`;
+        return `${theme.colors.success}20`
       case "danger":
-        return `${theme.colors.danger}20`;
+        return `${theme.colors.danger}20`
       case "warning":
-        return `${theme.colors.warning}20`;
+        return `${theme.colors.warning}20`
       case "info":
-        return `${theme.colors.info}20`;
+        return `${theme.colors.info}20`
       default:
-        return `${theme.colors.primary}20`;
+        return `${theme.colors.primary}20`
     }
   }};
   color: ${({ theme, variant }) => {
     switch (variant) {
       case "secondary":
-        return theme.colors.secondary;
+        return theme.colors.secondary
       case "success":
-        return theme.colors.success;
+        return theme.colors.success
       case "danger":
-        return theme.colors.danger;
+        return theme.colors.danger
       case "warning":
-        return theme.colors.warning;
+        return theme.colors.warning
       case "info":
-        return theme.colors.info;
+        return theme.colors.info
       default:
-        return theme.colors.primary;
+        return theme.colors.primary
     }
   }};
-`;
+`
 
 // ================= TABLE =================
 export const Table = styled.table`
@@ -326,7 +326,7 @@ export const Table = styled.table`
     overflow-x: auto;
     display: block;
   }
-`;
+`
 
 // ================= FEEDBACK & LOADING =================
 export const ErrorText = styled.p`
@@ -351,4 +351,4 @@ export const Spinner = styled.div`
       transform: rotate(360deg);
     }
   }
-`;
+`
