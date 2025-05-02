@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { FaEnvelope, FaLock, FaPhone, FaArrowRight } from 'react-icons/fa';
 import { Card, Button, Form, FormGroup, Label, Input, Alert } from '../components/common/styles';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout/layout";
 import { useAuth } from '../contexts/AuthContext';
 
 const LoginContainer = styled.div`

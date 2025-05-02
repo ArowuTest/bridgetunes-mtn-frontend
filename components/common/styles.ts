@@ -122,25 +122,31 @@ export const CardTitle = styled.h2`
   color: ${({ theme }) => theme.colors.dark};
 `;
 
-export const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' }>`
+export const Button = styled.button<{
+  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
+  color?: string;
+  padding?: string;
+  margin?: string;
+}>`
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: ${({ padding }) => padding || "0.5rem 1rem"};
   border: none;
-  border-radius: ${({ theme }) => theme.borderRadius?.small || '0.25rem'};
+  border-radius: ${({ theme }) => theme.borderRadius?.small || "0.25rem"};
   font-weight: 500;
   cursor: pointer;
-  transition: ${({ theme }) => theme.transitions?.normal || 'all 0.3s ease-in-out'};
+  transition: ${({ theme }) =>
+    theme.transitions?.normal || "all 0.3s ease-in-out"};
   background-color: ${({ theme, variant }) => {
     switch (variant) {
-      case 'secondary':
+      case "secondary":
         return theme.colors.secondary;
-      case 'success':
+      case "success":
         return theme.colors.success;
-      case 'danger':
+      case "danger":
         return theme.colors.danger;
-      case 'warning':
+      case "warning":
         return theme.colors.warning;
-      case 'info':
+      case "info":
         return theme.colors.info;
       default:
         return theme.colors.primary;
@@ -148,17 +154,17 @@ export const Button = styled.button<{ variant?: 'primary' | 'secondary' | 'succe
   }};
   color: ${({ theme, variant }) => {
     switch (variant) {
-      case 'warning':
+      case "warning":
         return theme.colors.dark;
       default:
-        return theme.colors.white;
+        return theme.colors.black;
     }
   }};
-  
+
   &:hover {
     opacity: 0.9;
   }
-  
+
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;

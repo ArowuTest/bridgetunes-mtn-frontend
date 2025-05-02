@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout/layout";
 import DashboardStats from '../components/Dashboard/DashboardStats';
 import ActivityChart from '../components/Dashboard/ActivityChart';
 import DrawDistribution from '../components/Dashboard/DrawDistribution';

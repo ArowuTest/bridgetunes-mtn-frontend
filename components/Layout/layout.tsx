@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import Header from '../Header';
 import { Container } from '../common/styles';
+import { LayoutContainer } from './layout.styles';
 
 interface LayoutProps {
   children: ReactNode;
@@ -9,7 +10,7 @@ interface LayoutProps {
 
 const Main = styled.main`
   min-height: calc(100vh - 80px);
-  padding: 2rem 0;
+  padding-top: 58px;
 `;
 
 const Footer = styled.footer`
@@ -27,17 +28,20 @@ const FooterContent = styled.div`
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
+    <LayoutContainer>
       <Header />
       <Main>
         <Container>{children}</Container>
       </Main>
       <Footer>
         <FooterContent>
-          <p>&copy; {new Date().getFullYear()} Bridgetunes MTN MyNumba Don Win. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Bridgetunes MTN MyNumba Don Win.
+            All rights reserved.
+          </p>
         </FooterContent>
       </Footer>
-    </>
+    </LayoutContainer>
   );
 };
 
