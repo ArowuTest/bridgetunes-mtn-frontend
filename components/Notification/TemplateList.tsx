@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaEdit, FaTrash, FaPlay, FaPlus } from 'react-icons/fa';
 import { Card, CardTitle, Button, Table, Badge, Spinner, Alert, Grid, Col, Flex } from '../common/styles';
-import { notificationAPI } from '../../services/api';
+import { notificationAPI } from "../../network/api";
 import { useNotification } from '../../contexts/NotificationContext';
 
 interface Template {

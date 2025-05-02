@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaUsers, FaEnvelope, FaPlay, FaCheck } from 'react-icons/fa';
 import { Card, CardTitle, Button, Form, FormGroup, Label, Select, Textarea, Alert, Spinner, Grid, Col } from '../common/styles';
-import { notificationAPI } from '../../services/api';
+import { notificationAPI } from "../../network/api";
 import { useNotification } from '../../contexts/NotificationContext';
 
 const CampaignFormContainer = styled(Card)`

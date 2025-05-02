@@ -8,7 +8,7 @@ import DrawDistribution from '../components/Dashboard/DrawDistribution';
 import RecentWinners from '../components/Dashboard/RecentWinners';
 import { Grid, Col, Card, CardTitle, Spinner, Alert } from '../components/common/styles';
 import { useAuth } from '../contexts/AuthContext';
-import { drawAPI, userAPI } from '../services/api';
+import { drawAPI, userAPI } from "../network/api";
 
 const DashboardContainer = styled.div`
   padding: 1.5rem;

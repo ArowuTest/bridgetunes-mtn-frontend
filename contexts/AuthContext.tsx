@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import Cookies from 'js-cookie';
-import { authAPI } from '../services/api';
+import { authAPI } from "../network/api";
 
 interface User {
   id: string;
