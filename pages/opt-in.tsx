@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout/layout";
 import OptInForm from '../components/OptIn/OptInForm';
 
 const OptInContainer = styled.div`

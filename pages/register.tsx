@@ -5,8 +5,8 @@ import { useRouter } from 'next/router';
 import styled from 'styled-components';
 import { FaUser, FaEnvelope, FaLock, FaPhone, FaArrowRight } from 'react-icons/fa';
 import { Card, Button, Form, FormGroup, Label, Input, Alert } from '../components/common/styles';
-import Layout from '../components/Layout';
-import { authAPI } from '../services/api';
+import Layout from "../components/Layout/layout";
+import { authAPI } from "../network/api";
 
 const RegisterContainer = styled.div`
   max-width: 500px;

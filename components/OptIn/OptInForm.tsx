@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaPhone, FaCheck, FaTimes, FaEnvelope } from 'react-icons/fa';
 import { Card, CardTitle, Button, Form, FormGroup, Label, Input, Alert, Spinner } from '../common/styles';
-import { extendedUserAPI } from '../../services/email';
+import { extendedUserAPI } from "../../network/email";
 
 const OptInContainer = styled(Card)`
   max-width: 500px;

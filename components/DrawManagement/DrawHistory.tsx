@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaCalendarAlt, FaTrophy, FaCheck, FaTimes } from 'react-icons/fa';
 import { Card, CardTitle, Button, Table, Badge, Spinner, Alert } from '../common/styles';
-import { drawAPI } from '../../services/api';
+import { drawAPI } from "../../network/api";
 import { Draw } from '../../types';
 
 // ================== START: NEW ADDITIONS ==================
