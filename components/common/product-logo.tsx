@@ -1,9 +1,11 @@
+import { useRouter } from "next/router"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   height: 3.5rem;
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
   }
@@ -32,8 +34,10 @@ const ResponsiveImage = styled.img`
 `
 
 export const ProductLogo = () => {
+  const { push } = useRouter()
+
   return (
-    <Wrapper>
+    <Wrapper onClick={() => push("/")}>
       <ResponsiveImage src="/images/bridgetune-logo.png" alt="bridgetune" />
 
       <Divider />
