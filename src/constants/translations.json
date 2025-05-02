@@ -9,12 +9,14 @@
         {
           "title": "Daily prizes:",
           "desc": "Every day, someone wins",
-          "bottomText": "Will You Be Next?"
+          "bottomText": "Will You Be Next?",
+          "image": "/images/landing-page/1-milli.png"
         },
         {
           "title": "Saturday Special:",
           "desc": "Win up to",
-          "bottomText": "every Saturday!"
+          "bottomText": "Every Saturday!",
+          "image": "/images/landing-page/3-milli.png"
         }
       ]
     }
