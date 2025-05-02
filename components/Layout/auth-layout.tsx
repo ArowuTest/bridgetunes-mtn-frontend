@@ -19,21 +19,17 @@ const Card = styled.div`
   padding: 3rem 2rem;
   border-radius: 16px;
   width: 90%;
+  max-width: 40rem;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    /* does not apply */
-    width: 90%;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 80%;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    width: 80%;
-    max-width: 55%;
   }
 `
 

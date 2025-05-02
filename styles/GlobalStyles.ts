@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -49,7 +49,6 @@ const GlobalStyles = createGlobalStyle`
     border: 1px solid #ddd;
     border-radius: ${({ theme }) => theme.borderRadius.medium};
     font-size: 1rem;
-    margin-bottom: 1rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -67,7 +66,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
     padding: 0 1rem;
   }
-`;
+`
 
-export default GlobalStyles;
-
+export default GlobalStyles
