@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout/layout";
 import DrawSelector from '../components/DrawManagement/DrawSelector';
 import DrawHistory from '../components/DrawManagement/DrawHistory';
 import { Grid, Col, Alert } from '../components/common/styles';

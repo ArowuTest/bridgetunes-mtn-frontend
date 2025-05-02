@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaSave, FaTimes } from 'react-icons/fa';
 import { Card, CardTitle, Button, Form, FormGroup, Label, Input, Select, Textarea, Alert, Spinner } from '../common/styles';
-import { notificationAPI } from '../../services/api';
+import { notificationAPI } from "../../network/api";
 import { useNotification } from '../../contexts/NotificationContext';
 
 const TemplateFormContainer = styled(Card)`

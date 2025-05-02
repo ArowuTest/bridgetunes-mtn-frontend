@@ -1,11 +1,42 @@
-# Exclude node_modules
+# Dependencies
 node_modules/
 
-# Exclude Next.js build folder
+# Next.js build output directories
 .next/
+out/
+dist/
 
-# Other files to ignore
+# Production build artifacts
+build/
+
+# Local environment variables
+.env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage directory
+coverage/
+
+# OS generated files
 .DS_Store
 Thumbs.db
+
+# Optional: VS Code settings (if you want to ignore workspace settings)
+// .vscode/
+
+#environment variables
+.env.development
+.env.production
+.env.test
+
+# Ignore local environment variables
+.env.local
+.env
