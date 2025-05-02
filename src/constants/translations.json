@@ -8,13 +8,13 @@
       "prizeCards": [
         {
           "title": "Daily prizes:",
-          "desc": "Win cash prizes every week.",
+          "desc": "Every day, someone wins",
           "bottomText": "Will You Be Next?"
         },
         {
-          "title": "Daily prizes:",
-          "desc": "Win cash prizes every week.",
-          "bottomText": "Will You Be Next?"
+          "title": "Saturday Special:",
+          "desc": "Win up to",
+          "bottomText": "every Saturday!"
         }
       ]
     }

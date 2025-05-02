@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface LandingPageWrapperProps {
-  backgroundPattern: string;
+  backgroundPattern?: string;
 }
 
 interface HeroSectionWrapperProps {
@@ -21,7 +21,7 @@ export const LandingPageWrapper = styled.section<LandingPageWrapperProps>`
     .life__changing__content {
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 40px;
 
       .title {
         text-align: center;
@@ -102,4 +102,10 @@ export const PrizeCard = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 12px;
+  padding: 1.5rem 6rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
 `;

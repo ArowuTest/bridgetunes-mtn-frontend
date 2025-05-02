@@ -4,14 +4,12 @@ import {
   LandingPageWrapper,
   PrizeCard,
 } from "./landing-page.style";
-import bgImage from "@/src/assets/images/landing-page/landing-page-bg.jpg";
-import bgPattern from "@/src/assets/images/landing-page/bg-pattern.png";
 import translations from "@/src/constants/translations.json";
 
 export const LandingPage = () => {
   return (
-    <LandingPageWrapper backgroundPattern={bgPattern.src}>
-      <HeroSection backgroundImage={bgImage.src}>
+    <LandingPageWrapper>
+      <HeroSection backgroundImage={"/images/landing-page/landing-page-bg.jpg"}>
         <Container>
           <div className="hero__section__content">
             <h1 className="hero__text">{translations.landingPage.heroText}</h1>
@@ -39,7 +37,7 @@ export const LandingPage = () => {
         hasCustomBG={true}
         justify="center"
         backgroundColor="#000"
-        backgroundPattern={bgPattern.src}
+        backgroundPattern={"/images/landing-page/bg-pattern.png"}
         className="life__changing__section"
       >
         <Container className="life__changing__content">
@@ -49,7 +47,7 @@ export const LandingPage = () => {
           <div className="cards__wrapper">
             {translations.landingPage.prizeCards.map((card, idx) => (
               <PrizeCard key={idx}>
-                <p>{card.title}</p>
+                <p className="title">{card.title}</p>
                 <p>{card.desc}</p>
               </PrizeCard>
             ))}
