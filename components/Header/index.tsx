@@ -210,16 +210,20 @@ const Header: React.FC = () => {
   };
   
   return (
-    <HeaderContainer style={{ boxShadow: isScrolled ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none' }}>
+    <HeaderContainer
+      style={{
+        boxShadow: isScrolled ? "0 2px 10px rgba(0, 0, 0, 0.1)" : "none",
+      }}
+    >
       <HeaderContent>
         <Logo>
-          <Link href="/" passHref>
-            <a style={{ color: 'white', textDecoration: 'none' }}>
+          <Link href="/" passHref legacyBehavior>
+            <a style={{ color: "white", textDecoration: "none" }}>
               MTN MyNumba Don Win
             </a>
           </Link>
         </Logo>
-        
+
         <NavLinks>
           <Link href="/" passHref>
             <NavLink>Home</NavLink>
@@ -246,12 +250,10 @@ const Header: React.FC = () => {
             <NavLink>Contact</NavLink>
           </Link>
         </NavLinks>
-        
+
         <ButtonGroup>
           <Link href="/dashboard" passHref>
-            <SecondaryButton>
-              Dashboard
-            </SecondaryButton>
+            <SecondaryButton>Dashboard</SecondaryButton>
           </Link>
           <Link href="/login" passHref>
             <PrimaryButton>
@@ -260,14 +262,14 @@ const Header: React.FC = () => {
             </PrimaryButton>
           </Link>
         </ButtonGroup>
-        
+
         <MobileMenuButton onClick={toggleMobileMenu} aria-label="Open menu">
           <FaBars />
         </MobileMenuButton>
       </HeaderContent>
-      
+
       <Overlay isOpen={isMobileMenuOpen} onClick={closeMobileMenu} />
-      
+
       <MobileMenu isOpen={isMobileMenuOpen}>
         <MobileMenuHeader>
           <Logo>Menu</Logo>
@@ -275,7 +277,7 @@ const Header: React.FC = () => {
             <FaTimes />
           </MobileMenuClose>
         </MobileMenuHeader>
-        
+
         <MobileNavLinks>
           <Link href="/" passHref>
             <MobileNavLink onClick={closeMobileMenu}>Home</MobileNavLink>
@@ -302,7 +304,7 @@ const Header: React.FC = () => {
             <MobileNavLink onClick={closeMobileMenu}>Contact</MobileNavLink>
           </Link>
         </MobileNavLinks>
-        
+
         <MobileButtonGroup>
           <Link href="/dashboard" passHref>
             <SecondaryButton onClick={closeMobileMenu}>
