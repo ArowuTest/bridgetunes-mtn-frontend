@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react"
-import { HeaderContainer } from "./styles"
-import { LogoSVG } from "@/src/assets/svgs"
-import path from "path"
-import Link from "next/link"
-import { Button } from "../common/styles"
+import React, { useState, useEffect } from "react";
+import { HeaderContainer } from "./styles";
+import { LogoSVG } from "@/src/assets/svgs/index";
+import path from "path";
+import Link from "next/link";
+import { Button, Container } from "../common/styles";
 
 const Header: React.FC = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const links = [
     {
@@ -38,25 +38,34 @@ const Header: React.FC = () => {
       path: "/livestream",
       label: "Livestream",
     },
-  ]
+  ];
 
   return (
     <HeaderContainer>
-      <div className="global-container">
-        <LogoSVG />
-        <nav className="nav__link__wrapper">
-          {links.map(link => (
-            <Link key={link.path} href={link.path} className="link">
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <div>
-          <Button>Dashboard</Button>
+      <Container>
+        <div className="header__wrapper">
+          <LogoSVG />
+          <nav className="nav__link__wrapper">
+            {links.map((link) => (
+              <Link key={link.path} href={link.path} className="link">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="cta__wrapper">
+            <Button>Dashboard</Button>
+            <Button
+              color="#0056B3"
+              backgroundColor="transparent"
+              border="1px solid #2C73DB"
+            >
+              Login
+            </Button>
+          </div>
         </div>
-      </div>
+      </Container>
     </HeaderContainer>
-  )
-}
+  );
+};
 
 export default Header
