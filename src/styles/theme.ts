@@ -30,7 +30,7 @@ export const theme = {
     grayDark: "#495057",
     white: "#ffffff",
     black: "#000000",
-    background: "#f5f5f5",
+    background: "#0d0d0d",
     text: "#212529",
     textLight: "#6c757d",
   },
