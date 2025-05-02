@@ -3,7 +3,7 @@ import { HeaderContainer } from "./styles";
 import { LogoSVG } from "@/assets/svgs";
 import path from "path";
 import Link from "next/link";
-import { Button } from "../common/styles";
+import { Button, Container } from "../common/styles";
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,19 +42,28 @@ const Header: React.FC = () => {
 
   return (
     <HeaderContainer>
-      <div className="global-container">
-        <LogoSVG />
-        <nav className="nav__link__wrapper">
-          {links.map((link) => (
-            <Link key={link.path} href={link.path} className="link">
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <div>
-          <Button>Dashboard</Button>
+      <Container>
+        <div className="header__wrapper">
+          <LogoSVG />
+          <nav className="nav__link__wrapper">
+            {links.map((link) => (
+              <Link key={link.path} href={link.path} className="link">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="cta__wrapper">
+            <Button>Dashboard</Button>
+            <Button
+              color="#0056B3"
+              backgroundColor="transparent"
+              border="1px solid #2C73DB"
+            >
+              Login
+            </Button>
+          </div>
         </div>
-      </div>
+      </Container>
     </HeaderContainer>
   );
 };

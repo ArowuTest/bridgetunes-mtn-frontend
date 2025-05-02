@@ -1,0 +1,21 @@
+{
+    "landingPage": {
+      "heroText": "Turn Your Recharges Into Millions!",
+      "heroDesc": "Every recharge gives you points. Every point is a chance to win big in the MTN MyNumba Don Win promotion.",
+      "firstButton": "Opt-In Now",
+      "secondButton": "Check Your Points",
+      "lifeChangingTitle": "Life-Changing Prizes Await You",
+      "prizeCards": [
+        {
+          "title": "Daily prizes:",
+          "desc": "Win cash prizes every week.",
+          "bottomText": "Will You Be Next?"
+        },
+        {
+          "title": "Daily prizes:",
+          "desc": "Win cash prizes every week.",
+          "bottomText": "Will You Be Next?"
+        }
+      ]
+    }
+}

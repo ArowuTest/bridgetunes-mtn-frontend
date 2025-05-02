@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -37,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
     color: #fff;
     text-decoration: none;
     transition: ${({ theme }) => theme.transitions.normal};
+    font-weight: 400;
   }
 
   a:hover {
@@ -49,25 +50,19 @@ const GlobalStyles = createGlobalStyle`
     border: 1px solid #ddd;
     border-radius: ${({ theme }) => theme.borderRadius.medium};
     font-size: 1rem;
-    margin-bottom: 1rem;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
     font-weight: ${({ theme }) => theme.fontWeights.bold};
     line-height: 1.2;
+    margin: 0;
   }
 
   .global-container {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1280px;
-    margin: 0 auto;
     padding: 0 1rem;
   }
 `;
 
 export default GlobalStyles;
-

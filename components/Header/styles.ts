@@ -5,7 +5,17 @@ export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 8px 0;
+  padding: 14px 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+
+  .header__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .nav__link__wrapper {
     gap: 20px;
@@ -14,6 +24,12 @@ export const HeaderContainer = styled.header`
     .link {
       font-size: 0.85rem;
     }
+  }
+
+  .cta__wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
   }
 `;
 
