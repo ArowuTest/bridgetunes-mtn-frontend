@@ -1,0 +1,62 @@
+import React, { useState, useEffect } from "react"
+import { HeaderContainer } from "./styles"
+import { LogoSVG } from "@/src/assets/svgs"
+import path from "path"
+import Link from "next/link"
+import { Button } from "../common/styles"
+
+const Header: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  const links = [
+    {
+      path: "/",
+      label: "Home",
+    },
+    {
+      path: "/about",
+      label: "About",
+    },
+    {
+      path: "/opt-in-experience",
+      label: "Opt-in Experience",
+    },
+    {
+      path: "/draw-calendar",
+      label: "Draw Calendar",
+    },
+    {
+      path: "/prizes",
+      label: "Prizes",
+    },
+    {
+      path: "/winners",
+      label: "Winners",
+    },
+    {
+      path: "/livestream",
+      label: "Livestream",
+    },
+  ]
+
+  return (
+    <HeaderContainer>
+      <div className="global-container">
+        <LogoSVG />
+        <nav className="nav__link__wrapper">
+          {links.map(link => (
+            <Link key={link.path} href={link.path} className="link">
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <div>
+          <Button>Dashboard</Button>
+        </div>
+      </div>
+    </HeaderContainer>
+  )
+}
+
+export default Header
