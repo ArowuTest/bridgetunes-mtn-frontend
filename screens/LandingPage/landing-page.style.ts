@@ -25,7 +25,7 @@ export const LandingPageWrapper = styled.section<LandingPageWrapperProps>`
 
       .title {
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: #6b7280;
       }
 
@@ -98,7 +98,8 @@ export const PrizeCard = styled.div`
   width: fit-content;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #f3f4f6;
   align-items: center;
   justify-content: center;
+  border-radius: 12px;
 `;
