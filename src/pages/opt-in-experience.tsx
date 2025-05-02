@@ -1,21 +1,13 @@
-import React from "react"
 import Head from "next/head"
-import styled from "styled-components"
+import React from "react"
 import Layout from "../components/Layout/layout"
-import OptInForm from "../components/OptIn/OptInForm"
 import { OptInScreen } from "../screens/opt-in/opt-in-screen"
-
-const OptInContainer = styled.div`
-  padding: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-`
 
 const OptInPage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Opt-In | MTN MyNumba Don Win</title>
+        <title>Opt-In Experience | MTN MyNumba Don Win</title>
       </Head>
 
       <OptInScreen />
