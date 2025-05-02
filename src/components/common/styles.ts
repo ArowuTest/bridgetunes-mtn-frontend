@@ -3,16 +3,16 @@ import styled from "styled-components"
 export const Container = styled.div`
   max-width: ${({ theme }) => theme.breakpoints.fullhd || "1400px"};
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
   width: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 100%;
-    padding: 0 2rem;
+    padding: 0;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0 1rem;
+    padding: 0;
   }
 `
 

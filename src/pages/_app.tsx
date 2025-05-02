@@ -8,6 +8,7 @@ import { NotificationProvider } from "../contexts/NotificationContext"
 import { theme } from "../styles/themeEnhancer"
 import { QueryClientProvider } from "react-query"
 import { queryClient } from "@/src/network/react-query"
+import "../styles/globals.css"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
