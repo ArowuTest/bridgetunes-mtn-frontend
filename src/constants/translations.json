@@ -18,6 +18,30 @@
           "bottomText": "Every Saturday!",
           "image": "/images/landing-page/3-milli.png"
         }
-      ]
+      ],
+      "winningText": "Winning Is As Easy 1-2-3-4",
+      "winningStepCards": [
+        {
+          "title": "Step 1",
+          "desc": "Opt in to MyNumba Don Win by dialing *123# or clicking 'Join Now",
+          "image": "/images/landing-page/step-1.png"
+        },
+        {
+          "title": "Step 2",
+          "desc": "Recharge your MTN line to earn points (₦100 = 1 point, ₦200 = 2 points, Etc",
+          "image": "/images/landing-page/step-2.png"
+        },
+        {
+          "title": "Step 3",
+          "desc": "Automatically enter daily and Saturday draws with your points",
+          "image": "/images/landing-page/step-3.png"
+        },
+        {
+          "title": "Step 4",
+          "desc": "Win big and receive your prize directly to your account!",
+          "image": "/images/landing-page/step-4.png"
+        }
+      ],
+      "nextDrawTitle": "Next Draw Happening Soon!"
     }
 }

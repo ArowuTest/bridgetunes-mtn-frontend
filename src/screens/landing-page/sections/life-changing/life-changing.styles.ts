@@ -16,7 +16,7 @@ export const LifeChangingSectionWrapper = styled.section`
 
       .title {
         text-align: center;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: #6b7280;
       }
 
