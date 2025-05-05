@@ -1,31 +1,43 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-// Styled Components
 const CounterWrapper = styled.div`
   display: flex;
-  gap: 32px;
+  gap: 16px;
   width: fit-content;
+
+  @media (min-width: 600px) {
+    gap: 32px;
+  }
 `;
 
 const BoxWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70px;
+  min-width: 50px;
+
+  @media (min-width: 600px) {
+    min-width: 70px;
+  }
 `;
 
 const TimeBox = styled.div`
-  min-width: 90px;
-  min-height: 90px;
+  min-width: 60px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2px;
+  padding: 1px;
   border-radius: 5px;
   background: linear-gradient(180deg, #ffcc08 0%, #ff8e00 100%);
   box-sizing: border-box;
 
+  @media (min-width: 600px) {
+    min-width: 90px;
+    min-height: 90px;
+    padding: 2px;
+  }
 `;
 
 const TimeInner = styled.span`
@@ -34,26 +46,34 @@ const TimeInner = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   font-family: "Montserrat";
   color: #fff;
   background: #101935;
-  border-radius: 5px; 
+  border-radius: 5px;
   box-sizing: border-box;
   line-height: normal;
+
+  @media (min-width: 600px) {
+    font-size: 2.2rem;
+  }
 `;
 
 const Label = styled.div`
-  margin-top: 8px;
-  font-size: 0.6rem;
+  margin-top: 4px;
+  font-size: 0.5rem;
   color: #6b7280;
   font-family: Montserrat;
   font-weight: 400;
   letter-spacing: 1px;
+
+  @media (min-width: 600px) {
+    margin-top: 8px;
+    font-size: 0.6rem;
+  }
 `;
 
-// Countdown calculation
 function getTimeRemaining(targetDate: string) {
   const total = Date.parse(targetDate) - Date.now();
   const seconds = Math.max(Math.floor((total / 1000) % 60), 0);

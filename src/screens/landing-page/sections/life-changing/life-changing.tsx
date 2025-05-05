@@ -13,7 +13,7 @@ export const LifeChangingSection = () => {
         className="life__changing__section"
       >
         <Container className="life__changing__content">
-          <h1 className="title">
+          <h1 className="global-title">
             {translations.landingPage.lifeChangingTitle}
           </h1>
           <div className="cards__wrapper">

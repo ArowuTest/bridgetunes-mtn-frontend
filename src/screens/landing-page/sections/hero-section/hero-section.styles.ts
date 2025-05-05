@@ -57,4 +57,52 @@ export const HeroSectionWrapper = styled.div<HeroSectionWrapperProps>`
       margin-top: 1.5rem;
     }
   }
+
+  @media (max-width: 1024px) {
+    .hero__section__content {
+      padding: 9rem 0 9rem 0;
+      max-width: 57%;
+
+      .hero__text {
+        font-size: 2.8rem;
+      }
+
+      .hero__sub__section {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 820px) {
+    &::before {
+      background: linear-gradient(to top, #000000 10%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(290deg, #000000 0.31%, rgba(0, 0, 0, 0) 69.68%),
+        url(${({ backgroundImage }) => backgroundImage}) no-repeat center;
+      background-size: cover;
+    }
+
+    .hero__section__content {
+      padding: 16.5rem 0 3rem 0;
+      max-width: 100%;
+      gap: 15px;
+
+      .hero__text {
+        font-size: 2rem;
+      }
+
+      .hero__sub__section {
+        font-size: 1.15rem;
+        font-weight: 500;
+      }
+
+      .hero__cta__buttons {
+        gap: 10px;
+
+        button {
+          padding: 12px 20px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
 `;

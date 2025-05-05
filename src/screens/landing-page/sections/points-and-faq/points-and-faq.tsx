@@ -1,9 +1,11 @@
-import { Container, Flex, Form } from "@/src/components/common/styles";
+import { Button, Container, Flex, Form } from "@/src/components/common/styles";
 import translations from "@/src/constants/translations.json";
 import { PointsAndFAQWrapper, StyledInput } from "./points-and-faq.style";
 import { FaqBox } from "@/src/components/common/faq-box";
+import { useState } from "react";
 
 export const PointsAndFAQ = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   return (
     <PointsAndFAQWrapper>
       <Flex
@@ -84,11 +86,60 @@ export const PointsAndFAQ = () => {
         <Container>
           <Flex className="faq__content__wrapper" direction="column" gap="25px">
             <h1 className="title">{translations.landingPage.faq.title}</h1>
-            <Flex className="faqs__wrapper" direction="row" gap="25px">
+            <Flex className="faqs__boxes__wrapper">
               {translations.landingPage.faq.faqs.map((faq, idx) => (
-                <FaqBox content={faq} key={idx} />
+                <FaqBox
+                  content={faq}
+                  key={idx}
+                  className="faq-item-wrapper"
+                  isOpen={openFaq === idx}
+                  onToggle={() => setOpenFaq(openFaq === idx ? null : idx)}
+                />
               ))}
             </Flex>
+          </Flex>
+        </Container>
+      </Flex>
+      <Flex
+        direction="row"
+        justify="center"
+        align="center"
+        className="start__winning__box"
+        backgroundPattern={"/images/landing-page/bg-pattern.png"}
+        hasCustomBG
+      >
+        <Container>
+          <Flex
+            direction="row"
+            justify="center"
+            align="center"
+            gap="20px"
+            padding="10px 0"
+          >
+            <div className="image__wrapper">
+              <img src="/images/landing-page/chance.png" alt="win big" />
+              <img
+                className="money__absolute"
+                src="/images/landing-page/money.png"
+                alt="win big"
+              />
+            </div>
+            <div className="content__wrap">
+              <h1 className="title">
+                Don't Miss Your Chance to Become a Millionaire!
+              </h1>
+              <p className="sub__text">
+                Join thousands of MTN customers who have already won big in
+                MyNumba Don Win
+              </p>
+              <p className="sub__text__2">
+                It takes just seconds to opt in, and you could be our next big
+                winner!
+              </p>
+              <Button padding="0.5rem 3rem" fontSize="0.8rem">
+                {translations.landingPage.faq.buttonText}
+              </Button>
+            </div>
           </Flex>
         </Container>
       </Flex>

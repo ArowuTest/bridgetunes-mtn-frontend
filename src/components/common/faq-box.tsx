@@ -1,22 +1,33 @@
 import styled from "styled-components";
 import { Flex } from "./styles";
 import { GoDash as DashIcon } from "react-icons/go";
-import { useState } from "react";
+import { FiPlus as PlusIcon } from "react-icons/fi";
 
 type FaqProps = {
   title: string;
   content: string;
 };
 
+type FaqBoxProps = {
+  content: FaqProps;
+  isOpen?: boolean;
+  onToggle?: () => void;
+  className?: string;
+};
+
 const FaqBoxWrapper = styled.div`
-  width: 100%;
   background: #fff;
   padding: 20px;
-  max-width: 420px;
+  /* width: 400px; */ /* REMOVED fixed width */
+  width: 100%; /* Ensure it takes full width of its container (the column item) */
   display: flex;
   flex-direction: row;
   gap: 20px;
   border-radius: 16px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* break-inside: avoid; /* Moved to the wrapper class in CSS */
+  /* margin-bottom: 25px; */ /* Moved to the wrapper class in CSS */
 
   .content__wrapper {
     .title {
@@ -40,22 +51,33 @@ const FaqBoxWrapper = styled.div`
   }
 `;
 
-export const FaqBox = ({ content }: { content: FaqProps }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const FaqBox = ({
+  content,
+  isOpen = false,
+  onToggle,
+  className,
+}: FaqBoxProps) => {
   return (
-    <FaqBoxWrapper style={{ alignItems: isOpen ? "flex-start" : "center" }}>
+    <FaqBoxWrapper
+      style={{ alignItems: isOpen ? "flex-start" : "center" }}
+      className={className}
+    >
       <Flex
         direction="column"
         justify="flex-start"
-        align={"flex-start"}
+        align="flex-start"
         gap="8px"
         className="content__wrapper"
       >
         <p className="title">{content.title}</p>
         {isOpen && <p className="content">{content.content}</p>}
       </Flex>
-      <div className="toggle" style={{ background: isOpen ? "#3b82f6" : "" }} onClick={()=> setIsOpen(!isOpen)}>
-        <DashIcon size={20} />
+      <div
+        className="toggle"
+        style={{ background: isOpen ? "#3b82f6" : "#F3F4F6" }}
+        onClick={onToggle}
+      >
+        {isOpen ? <DashIcon size={20} color="#fff" /> : <PlusIcon size={20} />}
       </div>
     </FaqBoxWrapper>
   );

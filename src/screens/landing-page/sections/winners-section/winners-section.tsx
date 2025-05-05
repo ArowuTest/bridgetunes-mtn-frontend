@@ -19,7 +19,9 @@ export const WinnersSection = () => {
         className="winners__section"
         hasCustomBG={true}
       >
-        <h1 className="title">{translations.landingPage.nextDrawTitle}</h1>
+        <h1 className="global-title">
+          {translations.landingPage.nextDrawTitle}
+        </h1>
         <Flex
           justify="center"
           align="center"
@@ -45,7 +47,11 @@ export const WinnersSection = () => {
             <p className="jackpot__text">Jackpot Up For Grabs!</p>
           </Flex>
         </Flex>
-        <Button padding="0.5rem 5rem" fontSize="0.9rem">
+        <Button
+          className="recharge__now__btn"
+          padding="0.5rem 5rem"
+          fontSize="0.9rem"
+        >
           {translations.landingPage.rechargeNowButton}
         </Button>
         <div className="winners__pool__box">
@@ -57,7 +63,7 @@ export const WinnersSection = () => {
             gap="40px"
             background="linear-gradient(258.42deg, #000000 -129.38%, #101935 93.71%)"
           >
-            <h1 className="title">
+            <h1 className="global-title">
               {translations.landingPage.winnersPoolText}
             </h1>
             <Flex

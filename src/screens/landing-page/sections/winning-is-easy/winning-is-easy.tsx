@@ -13,7 +13,9 @@ export const WinningIsEasySection = () => {
         background="linear-gradient(258.42deg, #000000 -129.38%, #101935 93.71%)"
         className="winning__section"
       >
-        <h1 className="title">{translations.landingPage.winningText}</h1>
+        <h1 className="global-title">
+          {translations.landingPage.winningText}
+        </h1>
         <div className="winning__cards__wrapper">
           {translations.landingPage.winningStepCards.map((card, idx) => (
             <StepCard key={idx}>

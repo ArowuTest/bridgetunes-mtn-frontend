@@ -5,12 +5,7 @@ export const WinnersSectionWrapper = styled.section`
 
   .winners__section {
     padding: 5rem 0 0 0;
-
-    .title {
-      text-align: center;
-      font-size: 1.8rem;
-      color: #6b7280;
-    }
+    overflow: hidden;
 
     .next__draw__content {
       padding: 2rem 10rem;
@@ -62,6 +57,54 @@ export const WinnersSectionWrapper = styled.section`
 
         .winners__card__wrapper {
         }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .winners__section {
+      padding: 4rem 0 0 0;
+
+      .next__draw__content {
+        max-width: 100%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 600px) {
+    .winners__section {
+      padding: 3rem 0 0 0;
+
+      .next__draw__content {
+        padding: 1.5rem;
+        gap: 25px;
+
+        .text {
+          font-size: 0.85rem;
+        }
+
+        .prize {
+          flex-direction: column;
+          gap: 8px;
+
+          .price__image {
+            max-width: 190px;
+          }
+
+          .jackpot__text {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .recharge__now__btn {
+        padding: 0.7rem 2rem;
+        font-size: 0.82rem;
+      }
+
+      .winners__pool__box {
+        
       }
     }
   }

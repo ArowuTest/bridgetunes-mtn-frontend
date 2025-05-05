@@ -4,17 +4,37 @@ export const WinningIsEasySectionWrapper = styled.div`
   width: 100%;
 
   .winning__section {
-    padding: 5rem 0 5rem 0;
-
-    .title {
-      text-align: center;
-      font-size: 1.8rem;
-      color: #6b7280;
-    }
+    padding: 5rem 0;
 
     .winning__cards__wrapper {
       display: flex;
       gap: 25px;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .winning__section {
+      padding: 3.5rem 1rem;
+
+      .winning__cards__wrapper {
+        justify-content: flex-start;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 600px) {
+    .winning__section {
+      .winning__cards__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        column-gap: 8px;
+        row-gap: 10px;
+      }
     }
   }
 `;
@@ -56,6 +76,29 @@ export const StepCard = styled.div`
   }
 
   &:hover {
-    
+  }
+
+  @media (max-width: 1024px) {
+    min-width: 240px;
+    flex-grow: 1;
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 600px) {
+    width: 48%;
+    min-width: auto;
+    padding: 20px 10px;
+    gap: 10px;
+
+    .image__wrapper {
+      .image {
+        width: 100%;
+        max-width: 120px;
+      }
+    }
+
+    .description {
+      font-size: 0.65rem;
+    }
   }
 `;

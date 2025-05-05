@@ -55,6 +55,67 @@ export const PointsAndFAQWrapper = styled.div`
       align-items: center;
       width: 100%;
       padding: 4rem 0;
+
+      .faqs__boxes__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: masonry;
+        align-items: flex-start;
+        column-count: 2;
+        column-gap: 25px;
+        width: 100%;
+        max-width: 900px;
+      }
+
+      .faq-item-wrapper {
+        width: 100%;
+        break-inside: avoid;
+        margin-bottom: 25px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .start__winning__box {
+    .image__wrapper {
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+
+      .money__absolute {
+        position: absolute;
+        bottom: -130px;
+      }
+    }
+
+    .content__wrap {
+      max-width: 370px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 7px;
+
+      .title,
+      .sub__text,
+      .sub__text__2 {
+        text-align: left;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+
+      .sub__text {
+        font-weight: 500;
+        color: #6b7280;
+        font-size: 1.1rem;
+      }
+
+      .sub__text__2 {
+        font-weight: 500;
+        color: #6b7280;
+        font-size: 0.9rem;
+        margin: 20px 0;
+      }
     }
   }
 `;

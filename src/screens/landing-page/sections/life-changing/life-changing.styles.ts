@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const LifeChangingSectionWrapper = styled.section`
   .life__changing__section {
     width: 100%;
@@ -14,17 +12,35 @@ export const LifeChangingSectionWrapper = styled.section`
       flex-direction: column;
       gap: 40px;
 
-      .title {
-        text-align: center;
-        font-size: 1.8rem;
-        color: #6b7280;
-      }
-
       .cards__wrapper {
         display: flex;
         flex-direction: row;
         gap: 40px;
         justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .life__changing__section {
+      padding: 4rem 0;
+      gap: 30px;
+    }
+  }
+  @media (max-width: 768px) {
+    .life__changing__section {
+      padding: 3rem 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .life__changing__section {
+      .life__changing__content {
+        .cards__wrapper {
+          flex-direction: column;
+          align-items: center;
+          gap: 25px;
+        }
       }
     }
   }
@@ -44,6 +60,7 @@ export const PrizeCard = styled.div`
   .title {
     font-size: 2rem;
     font-weight: 600;
+    color: #6b7280;
   }
 
   .bottom__section {
@@ -69,6 +86,30 @@ export const PrizeCard = styled.div`
     .bottom__text {
       font-size: 0.9rem;
       margin-top: 2px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 48%;
+    padding: 1.5rem 2rem;
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .bottom__section {
+      .prize__image {
+        max-width: 200px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 600px) {
+    width: 95%;
+
+    .title {
+      font-size: 1.4rem;
     }
   }
 `;
