@@ -1,4 +1,10 @@
-export const LogoSVG = ({ className }: { className?: string }) => (
+export const LogoSVG = ({
+  className,
+  onClick,
+}: {
+  className?: string;
+  onClick?: () => void;
+}) => (
   <svg
     width="181"
     height="40"
@@ -6,6 +12,7 @@ export const LogoSVG = ({ className }: { className?: string }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
+    onClick={onClick}
   >
     <g clip-path="url(#clip0_41_4835)">
       <path

@@ -74,7 +74,10 @@ export const WinnersSection = () => {
               className="winners__card__wrapper"
             >
               {winners.map((card, idx) => (
-                <WinnerCard card={card} key={idx} />
+                <WinnerCard
+                  card={{ ...card, showConfettiImage: true }}
+                  key={idx}
+                />
               ))}
             </Flex>
             <Button

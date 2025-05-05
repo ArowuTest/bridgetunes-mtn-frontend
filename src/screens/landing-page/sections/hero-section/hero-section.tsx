@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react";
 import { Button, Container } from "@/src/components/common/styles";
 import translations from "@/src/constants/translations.json";
 import { HeroSectionWrapper } from "./hero-section.styles";
 import { motion } from "framer-motion";
-import ReactConfetti from "react-confetti";
 import { useRouter } from "next/router";
 import ConfettiBox from "@/src/components/common/confetti-box";
 
@@ -20,6 +20,13 @@ const contentVariants = {
 
 export const HeroSection = () => {
   const { push } = useRouter();
+  const [showConfettiImage, setShowConfettiImage] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowConfettiImage(true), 4500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <HeroSectionWrapper
       backgroundImage={"/images/landing-page/landing-page-bg.jpg"}
@@ -36,7 +43,13 @@ export const HeroSection = () => {
         width={1600}
         wind={0}
       />
-
+      {showConfettiImage && (
+        <img
+          className="confettiImg"
+          src="/images/confetti.png"
+          alt="confetti"
+        />
+      )}
       <Container>
         <motion.div
           className="hero__section__content"

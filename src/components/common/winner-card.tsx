@@ -1,7 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import ReactConfetti from "react-confetti";
 import styled from "styled-components";
-import ConfettiBox from "./confetti-box";
 
 type WinnerCardProps = {
   name: string;
@@ -9,6 +7,7 @@ type WinnerCardProps = {
   date: string;
   phoneNumber: string;
   type: string;
+  showConfettiImage?: boolean;
 };
 
 const WinnerCardWrapper = styled.div`
@@ -22,14 +21,28 @@ const WinnerCardWrapper = styled.div`
   border-radius: 20px;
   max-width: 400px;
   position: relative;
+  overflow: hidden;
 
-  .confetti__box__wrapper {
+  .card__confetti {
     position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    height: 200px;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/confetti.png") no-repeat center;
+    background-size: cover;
+    z-index: 0;
+    opacity: 0.7;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
   }
 
   .image {
@@ -86,36 +99,26 @@ export const WinnerCard = ({ card }: { card: WinnerCardProps }) => {
     };
 
     updateWidth();
-
     window.addEventListener("resize", updateWidth);
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   return (
     <WinnerCardWrapper ref={cardRef}>
-      <ConfettiBox
-        gravity={0.1}
-        height={200}
-        initialVelocityX={2}
-        initialVelocityY={2}
-        numberOfPieces={80}
-        opacity={1}
-        recycle
-        run
-        width={cardWidth}
-        wind={0}
-      />
-      <img
-        className="image"
-        src="/images/landing-page/winner-image.png"
-        alt="winner"
-      />
-      <div className="card__info">
-        <p>{card.phoneNumber}</p>
-        <p>{card.name}</p>
-        <p>{card.type}</p>
-        <h3 className="amount">{card.amount}</h3>
-        <p>{card.date}</p>
+      {card.showConfettiImage && <div className="card__confetti" />}
+      <div className="content">
+        <img
+          className="image"
+          src="/images/landing-page/winner-image.png"
+          alt="winner"
+        />
+        <div className="card__info">
+          <p>{card.phoneNumber}</p>
+          <p>{card.name}</p>
+          <p>{card.type}</p>
+          <h3 className="amount">{card.amount}</h3>
+          <p>{card.date}</p>
+        </div>
       </div>
     </WinnerCardWrapper>
   );

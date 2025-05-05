@@ -18,12 +18,20 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
   }
 
+  .logo {
+    cursor: pointer;
+  }
+
   .nav__link__wrapper {
     gap: 20px;
     display: flex;
 
     .link {
       font-size: 0.85rem;
+    }
+
+    .link.active {
+      color: #ffcc08;
     }
   }
 
