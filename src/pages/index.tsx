@@ -1,6 +1,6 @@
 import React from "react"
 import Head from "next/head"
-import LandingPage from "@/src/screens/LandingPage/landing-page"
+import LandingPage from "@/src/screens/landing-page/landing-page"
 import Layout from "@/src/components/Layout/layout"
 
 const HomePage: React.FC = () => {

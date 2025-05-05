@@ -9,13 +9,96 @@
         {
           "title": "Daily prizes:",
           "desc": "Every day, someone wins",
-          "bottomText": "Will You Be Next?"
+          "bottomText": "Will You Be Next?",
+          "image": "/images/landing-page/1-milli.png"
         },
         {
           "title": "Saturday Special:",
           "desc": "Win up to",
-          "bottomText": "every Saturday!"
+          "bottomText": "Every Saturday!",
+          "image": "/images/landing-page/3-milli.png"
         }
-      ]
+      ],
+      "winningText": "Winning Is As Easy 1-2-3-4",
+      "winningStepCards": [
+        {
+          "title": "Step 1",
+          "desc": "Opt in to MyNumba Don Win by dialing *123# or clicking 'Join Now",
+          "image": "/images/landing-page/step-1.png"
+        },
+        {
+          "title": "Step 2",
+          "desc": "Recharge your MTN line to earn points (₦100 = 1 point, ₦200 = 2 points, Etc",
+          "image": "/images/landing-page/step-2.png"
+        },
+        {
+          "title": "Step 3",
+          "desc": "Automatically enter daily and Saturday draws with your points",
+          "image": "/images/landing-page/step-3.png"
+        },
+        {
+          "title": "Step 4",
+          "desc": "Win big and receive your prize directly to your account!",
+          "image": "/images/landing-page/step-4.png"
+        }
+      ],
+      "nextDrawTitle": "Next Draw Happening Soon!",
+      "rechargeNowButton": "Recharge Now to Increase Your Chances!",
+      "winnersPoolText": "These Lucky Winners Are Celebrating Right Now!",
+      "winnersCards": [
+        {
+          "name": "Chinonso D.",
+          "amount": "₦1,000,000",
+          "date": "12 Aug, 2025",
+          "phoneNumber": "080*****678",
+          "type": "Weekend Jackpot"
+        },
+        {
+          "name": "Adebayo 0.",
+          "amount": "₦1,000,000",
+          "date": "12 Aug, 2025",
+          "phoneNumber": "080*****678",
+          "type": "Weekend Jackpot"
+        },
+        {
+          "name": "Adebayo 0.",
+          "amount": "₦1,000,000",
+          "date": "12 Aug, 2025",
+          "phoneNumber": "080*****678",
+          "type": "Weekend Jackpot"
+        }
+      ],
+      "winnerBtnText": "You Could Be Next! Recharge Today",
+      "calculatePointsBox": {
+        "title": "See How Many Points You'll Earn",
+        "desc": "Enter your recharge amount to see how many points you'll earn.",
+        "inputPlaceholder": "Enter Recharged Amount",
+        "amountPlaceholder": "₦[Amount]",
+        "pointsPlaceholder": "[X] points",
+        "calculateButton": "[X] chances to win!",
+        "pointsTip": "Pro tip: Recharge ₦1,000 or more to earn maximum points (10)!"
+      },
+      "faq": {
+        "title": "Got Questions? We've Got Answers",
+        "faqs": [
+          {
+            "title": "About the Promotion",
+            "content": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+          },
+          {
+            "title": "Points & Recharges",
+            "content": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+          },
+          {
+            "title": "About the Promotion",
+            "content": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+          },
+          {
+            "title": "Points & Recharges",
+            "content": "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor"
+          }
+        ],
+        "buttonText": "Start Winning Now"
+      }
     }
 }

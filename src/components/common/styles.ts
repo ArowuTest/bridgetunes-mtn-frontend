@@ -2,31 +2,32 @@ import styled from "styled-components"
 
 // ================= LAYOUT PRIMITIVES =================
 export const Container = styled.div`
-  max-width: ${({ theme }) => theme.breakpoints.fullhd || "1200px"};
+  max-width: ${({ theme }) => theme.breakpoints.fullhd || "1400px"};
   width: 100%;
-  /* max-width: 1400px; */
+  box-sizing: border-box;
   padding: 0 1rem;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     max-width: 100%;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding: 0;
+    /* padding: 0 1.5rem; */
   }
-`
+`;
 
 export const Flex = styled.div<{
-  direction?: "row" | "column"
-  justify?: string
-  align?: string
-  gap?: string
-  backgroundImage?: string
-  background?: string
-  hasCustomBG?: boolean
-  backgroundPattern?: string
-  backgroundColor?: string
+  direction?: "row" | "column";
+  justify?: string;
+  align?: string;
+  gap?: string;
+  backgroundImage?: string;
+  background?: string;
+  hasCustomBG?: boolean;
+  backgroundPattern?: string;
+  backgroundColor?: string;
+  padding?: string;
 }>`
   display: flex;
   position: relative; // Add this
@@ -36,6 +37,7 @@ export const Flex = styled.div<{
   gap: ${({ gap }) => gap || "0"};
   background-image: ${({ backgroundImage }) => backgroundImage || ""};
   background: ${({ background }) => background || ""};
+  padding: ${({ padding }) => padding || ""};
 
   & > * {
     position: relative;
@@ -61,7 +63,7 @@ export const Flex = styled.div<{
       pointer-events: none;
     }
   `}
-`
+`;
 
 export const Grid = styled.div`
   display: grid;

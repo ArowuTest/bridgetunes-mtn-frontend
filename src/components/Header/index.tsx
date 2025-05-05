@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react"
-import { HeaderContainer } from "./styles"
-import { LogoSVG } from "@/src/assets/svgs/index"
-import path from "path"
-import Link from "next/link"
-import { Button, Container } from "../common/styles"
-import { useAuth } from "@/src/contexts/AuthContext"
-import { useRouter } from "next/router"
+import React, { useState, useEffect } from "react";
+import { HeaderContainer } from "./styles";
+import { LogoSVG } from "@/src/assets/svgs/index";
+import path from "path";
+import Link from "next/link";
+import { Button, Container, Flex } from "../common/styles";
+import { useAuth } from "@/src/contexts/AuthContext";
+import { useRouter } from "next/router";
+import { RxHamburgerMenu as MenuIcon } from "react-icons/rx";
 
 const Header: React.FC = () => {
-  const { isAuthenticated } = useAuth()
-  const { push } = useRouter()
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  const { isAuthenticated } = useAuth();
+  const { pathname, push } = useRouter();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const links = [
     {
@@ -42,16 +43,20 @@ const Header: React.FC = () => {
       path: "/livestream",
       label: "Livestream",
     },
-  ]
+  ];
 
   return (
     <HeaderContainer>
       <Container>
         <div className="header__wrapper">
-          <LogoSVG />
+          <LogoSVG className="logo" onClick={() => push("/")} />
           <nav className="nav__link__wrapper">
-            {links.map(link => (
-              <Link key={link.path} href={link.path} className="link">
+            {links.map((link) => (
+              <Link
+                key={link.path}
+                href={link.path}
+                className={`link ${pathname === link.path ? "active" : ""}`}
+              >
                 {link.label}
               </Link>
             ))}
@@ -70,10 +75,18 @@ const Header: React.FC = () => {
               </Button>
             )}
           </div>
+          <Flex
+            direction="row"
+            align="center"
+            justify="center"
+            className="mobile__menu__wrap"
+          >
+            <MenuIcon size={22} strokeWidth="1px" />
+          </Flex>
         </div>
       </Container>
     </HeaderContainer>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
