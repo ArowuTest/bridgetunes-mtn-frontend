@@ -77,19 +77,19 @@ export const PointsAndFAQWrapper = styled.div`
   }
 
   .start__winning__box {
-    .image__wrapper {
-      width: 50%;
-      position: relative;
-      overflow: hidden;
+    gap: 30px;
 
-      .money__absolute {
-        position: absolute;
-        bottom: -130px;
+    .image__wrapper {
+      width: 36%;
+      position: relative;
+
+      img {
+        width: 100%;
       }
     }
 
     .content__wrap {
-      max-width: 370px;
+      max-width: 340px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -107,7 +107,7 @@ export const PointsAndFAQWrapper = styled.div`
       .sub__text {
         font-weight: 500;
         color: #6b7280;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       .sub__text__2 {
@@ -115,6 +115,68 @@ export const PointsAndFAQWrapper = styled.div`
         color: #6b7280;
         font-size: 0.9rem;
         margin: 20px 0;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 600px) {
+    .calculate__winners__point {
+      padding: 3rem 0;
+
+      .calculate__winners__content {
+        padding: 1.5rem;
+        width: 85%;
+
+        .form__input__wrapper {
+          .results__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          .tips__text {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    .faq__wrapper {
+      .faq__content__wrapper {
+        gap: 28px;
+
+        .faqs__boxes__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          .faq-item-wrapper {
+            margin: 0px;
+          }
+        }
+      }
+    }
+
+    .start__winning__box {
+      .start__winning__box__content {
+        flex-direction: column;
+
+        .image__wrapper {
+          width: 100%;
+        }
+
+        .content__wrap {
+          justify-content: center;
+          align-items: center;
+
+          h1,
+          p {
+            text-align: center;
+          }
+        }
       }
     }
   }

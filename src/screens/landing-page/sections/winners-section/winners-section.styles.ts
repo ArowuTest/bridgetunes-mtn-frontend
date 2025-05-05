@@ -52,10 +52,16 @@ export const WinnersSectionWrapper = styled.section`
       .winners__pool__content {
         width: 100%;
         border-radius: 30px;
-        width: 100%;
-        padding: 5rem 0 5rem 0;
+        padding: 5rem 0.5rem;
 
         .winners__card__wrapper {
+          width: 100%;
+          box-sizing: border-box;
+          overflow: auto;
+
+          @media (max-width: 1200px) {
+            justify-content: flex-start;
+          }
         }
       }
     }
@@ -71,6 +77,23 @@ export const WinnersSectionWrapper = styled.section`
     }
   }
   @media (max-width: 768px) {
+    .winners__section {
+      .winners__btn {
+        padding: 0.7rem 2rem;
+        font-size: 0.82rem;
+      }
+
+      .winners__pool__box {
+        .winners__pool__content {
+          .winners__card__wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            overflow: auto;
+            gap: 20px;
+          }
+        }
+      }
+    }
   }
   @media (max-width: 600px) {
     .winners__section {
@@ -98,13 +121,24 @@ export const WinnersSectionWrapper = styled.section`
         }
       }
 
-      .recharge__now__btn {
+      .winners__btn {
         padding: 0.7rem 2rem;
         font-size: 0.82rem;
       }
 
       .winners__pool__box {
-        
+        .winners__pool__content {
+          padding: 3.5rem 1rem;
+          overflow: hidden;
+          width: 100%;
+
+          .winners__card__wrapper {
+            width: 100%;
+            justify-content: flex-start;
+            overflow: auto;
+            gap: 20px;
+          }
+        }
       }
     }
   }

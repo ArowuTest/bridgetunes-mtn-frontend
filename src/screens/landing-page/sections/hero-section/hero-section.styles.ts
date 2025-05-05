@@ -26,6 +26,14 @@ export const HeroSectionWrapper = styled.div<HeroSectionWrapperProps>`
     pointer-events: none;
   }
 
+  .confetti__box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
   .hero__section__content {
     position: relative;
     z-index: 1;

@@ -48,7 +48,7 @@ export const WinnersSection = () => {
           </Flex>
         </Flex>
         <Button
-          className="recharge__now__btn"
+          className="winners__btn"
           padding="0.5rem 5rem"
           fontSize="0.9rem"
         >
@@ -77,7 +77,11 @@ export const WinnersSection = () => {
                 <WinnerCard card={card} key={idx} />
               ))}
             </Flex>
-            <Button padding="0.5rem 5rem" fontSize="0.9rem">
+            <Button
+              padding="0.5rem 5rem"
+              fontSize="0.9rem"
+              className="winners__btn"
+            >
               {translations.landingPage.winnerBtnText}
             </Button>
           </Flex>

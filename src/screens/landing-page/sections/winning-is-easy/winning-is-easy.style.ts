@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const WinningIsEasySectionWrapper = styled.div`
   width: 100%;
@@ -39,7 +40,7 @@ export const WinningIsEasySectionWrapper = styled.div`
   }
 `;
 
-export const StepCard = styled.div`
+export const StepCard = styled(motion.div)`
   width: 250px;
   padding: 34px 28px;
   background: #0056b3;
@@ -49,12 +50,14 @@ export const StepCard = styled.div`
   gap: 20px;
   align-items: center;
   justify-content: center;
+  transition: 0.3s;
 
   .image__wrapper {
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.4s;
 
     .image {
       width: 165px;
@@ -76,6 +79,18 @@ export const StepCard = styled.div`
   }
 
   &:hover {
+    background: #ffcc00;
+
+    .step,
+    .description {
+      color: #000000;
+    }
+
+    .image__wrapper {
+      .image {
+        scale: 1.2;
+      }
+    }
   }
 
   @media (max-width: 1024px) {

@@ -26,7 +26,7 @@ export const PointsAndFAQ = () => {
           className="calculate__winners__content"
           gap="35px"
         >
-          <h1 className="title">
+          <h1 className="global-title">
             {translations.landingPage.calculatePointsBox.title}
           </h1>
           <Flex
@@ -51,6 +51,7 @@ export const PointsAndFAQ = () => {
               justify="flex-start"
               align="center"
               gap="10px"
+              className="results__wrapper"
             >
               <StyledInput
                 disabled
@@ -85,7 +86,9 @@ export const PointsAndFAQ = () => {
       <Flex className="faq__wrapper" justify="center">
         <Container>
           <Flex className="faq__content__wrapper" direction="column" gap="25px">
-            <h1 className="title">{translations.landingPage.faq.title}</h1>
+            <h1 className="global-title">
+              {translations.landingPage.faq.title}
+            </h1>
             <Flex className="faqs__boxes__wrapper">
               {translations.landingPage.faq.faqs.map((faq, idx) => (
                 <FaqBox
@@ -113,19 +116,15 @@ export const PointsAndFAQ = () => {
             direction="row"
             justify="center"
             align="center"
-            gap="20px"
             padding="10px 0"
+            gap="20px"
+            className="start__winning__box__content"
           >
             <div className="image__wrapper">
-              <img src="/images/landing-page/chance.png" alt="win big" />
-              <img
-                className="money__absolute"
-                src="/images/landing-page/money.png"
-                alt="win big"
-              />
+              <img src="/images/landing-page/MoneyMan.png" alt="win big" />
             </div>
             <div className="content__wrap">
-              <h1 className="title">
+              <h1 className="global-title">
                 Don't Miss Your Chance to Become a Millionaire!
               </h1>
               <p className="sub__text">
