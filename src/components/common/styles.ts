@@ -139,8 +139,12 @@ export const FormGroup = styled.div`
 
 export const Label = styled.label`
   display: block;
+  text-align: left;
+  padding-top: 1rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
+  color: ${({ theme }) => theme.colors.textLight};
+  font-size: 0.85rem;
 `
 
 // ================= COMPONENTS =================

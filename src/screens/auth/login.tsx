@@ -105,6 +105,7 @@ const StyledInput = styled(Input)`
 `
 
 const VerifyButton = styled(Button)`
+  border-radius: 0 0.3rem 0.3rem 0;
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   height: 100%;
