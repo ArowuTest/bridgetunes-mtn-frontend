@@ -28,7 +28,7 @@ export function PriceStructureTable() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+      transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
     >
       <div className="hidden md:block overflow-hidden rounded-lg border border-gray-700 shadow">
         <table className="w-full">
