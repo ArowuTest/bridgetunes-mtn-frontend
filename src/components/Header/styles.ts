@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   background: linear-gradient(258.42deg, #000000 -129.38%, #101935 93.71%);
@@ -9,12 +9,17 @@ export const HeaderContainer = styled.header`
   z-index: 9999;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 
   .header__wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .logo {
+    cursor: pointer;
   }
 
   .nav__link__wrapper {
@@ -24,6 +29,10 @@ export const HeaderContainer = styled.header`
     .link {
       font-size: 0.85rem;
     }
+
+    .link.active {
+      color: #ffcc08;
+    }
   }
 
   .cta__wrapper {
@@ -31,5 +40,28 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     gap: 15px;
   }
-`;
 
+  .mobile__menu__wrap {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .nav__link__wrapper,
+    .cta__wrapper {
+      display: none;
+    }
+
+    .mobile__menu__wrap {
+      display: flex;
+      background: #0056b3;
+      padding: 7px;
+      border-radius: 8px;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    .logo {
+      max-width: 150px;
+    }
+  }
+`;

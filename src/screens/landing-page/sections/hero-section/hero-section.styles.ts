@@ -1,45 +1,10 @@
 import styled from "styled-components";
 
-interface LandingPageWrapperProps {
-  backgroundPattern?: string;
-}
-
 interface HeroSectionWrapperProps {
   backgroundImage: string;
 }
 
-export const LandingPageWrapper = styled.section<LandingPageWrapperProps>`
-  position: relative;
-  width: 100%;
-
-  .life__changing__section {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    padding: 5rem 0 4rem 0;
-
-    .life__changing__content {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-
-      .title {
-        text-align: center;
-        font-size: 1.6rem;
-        color: #6b7280;
-      }
-
-      .cards__wrapper {
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-        justify-content: center;
-      }
-    }
-  }
-`;
-
-export const HeroSection = styled.div<HeroSectionWrapperProps>`
+export const HeroSectionWrapper = styled.div<HeroSectionWrapperProps>`
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -59,6 +24,16 @@ export const HeroSection = styled.div<HeroSectionWrapperProps>`
     transform: scaleX(-1); /* Mirror the image */
     z-index: 0;
     pointer-events: none;
+  }
+
+  .confettiImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    opacity: 0.7;
   }
 
   .hero__section__content {
@@ -92,20 +67,52 @@ export const HeroSection = styled.div<HeroSectionWrapperProps>`
       margin-top: 1.5rem;
     }
   }
-`;
 
-export const PrizeCard = styled.div`
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  background-color: #f3f4f6;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  padding: 1.5rem 6rem;
+  @media (max-width: 1024px) {
+    .hero__section__content {
+      padding: 9rem 0 9rem 0;
+      max-width: 57%;
 
-  .title {
-    font-size: 2rem;
-    font-weight: 600;
+      .hero__text {
+        font-size: 2.8rem;
+      }
+
+      .hero__sub__section {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 820px) {
+    &::before {
+      background: linear-gradient(to top, #000000 10%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(290deg, #000000 0.31%, rgba(0, 0, 0, 0) 69.68%),
+        url(${({ backgroundImage }) => backgroundImage}) no-repeat center;
+      background-size: cover;
+    }
+
+    .hero__section__content {
+      padding: 16.5rem 0 3rem 0;
+      max-width: 100%;
+      gap: 15px;
+
+      .hero__text {
+        font-size: 2rem;
+      }
+
+      .hero__sub__section {
+        font-size: 1.15rem;
+        font-weight: 500;
+      }
+
+      .hero__cta__buttons {
+        gap: 10px;
+
+        button {
+          padding: 12px 20px;
+          font-size: 0.8rem;
+        }
+      }
+    }
   }
 `;
