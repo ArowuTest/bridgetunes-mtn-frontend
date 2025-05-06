@@ -48,7 +48,7 @@ const TimeInner = styled.span`
   justify-content: center;
   font-size: 1.4rem;
   font-weight: 700;
-  font-family: "Monospace";
+  font-family: "Monospace Bold";
   color: #fff;
   background: #101935;
   border-radius: 5px;

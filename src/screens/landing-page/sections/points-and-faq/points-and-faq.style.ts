@@ -4,6 +4,18 @@ import styled from "styled-components";
 export const PointsAndFAQWrapper = styled.div`
   width: 100%;
 
+  /* Hide spinner controls in Webkit browsers */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Hide spinner controls in Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
   .calculate__winners__point {
     padding: 4.5rem 0;
 

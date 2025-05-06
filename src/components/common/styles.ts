@@ -151,20 +151,21 @@ export const Label = styled.label`
 
 // ================= COMPONENTS =================
 export const Button = styled.button<{
-  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info"
-  color?: string
-  padding?: string
-  margin?: string
-  borderRadius?: string
-  fontFamily?: string
-  backgroundColor?: string
-  border?: string
-  fontSize?: string
+  variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
+  color?: string;
+  padding?: string;
+  margin?: string;
+  borderRadius?: string;
+  fontFamily?: string;
+  backgroundColor?: string;
+  border?: string;
+  fontSize?: string;
 }>`
   display: inline-block;
   padding: ${({ padding }) => padding || "0.6rem 1.1rem"};
   border: ${({ border }) => border || "1px solid transparent"};
   border-radius: ${({ borderRadius }) => borderRadius || "0.6rem"};
+  margin: ${({ margin }) => margin || "0px"};
   font-weight: 500;
   cursor: pointer;
   font-family: ${({ fontFamily }) => fontFamily || "Open Sans, sans-serif"};
@@ -172,29 +173,29 @@ export const Button = styled.button<{
   transition: ${({ theme }) =>
     theme.transitions?.normal || "all 0.3s ease-in-out"};
   background-color: ${({ theme, variant, backgroundColor }) => {
-    if (backgroundColor) return backgroundColor
+    if (backgroundColor) return backgroundColor;
     switch (variant) {
       case "secondary":
-        return theme.colors.secondary
+        return theme.colors.secondary;
       case "success":
-        return theme.colors.success
+        return theme.colors.success;
       case "danger":
-        return theme.colors.danger
+        return theme.colors.danger;
       case "warning":
-        return theme.colors.warning
+        return theme.colors.warning;
       case "info":
-        return theme.colors.info
+        return theme.colors.info;
       default:
-        return theme.colors.primary
+        return theme.colors.primary;
     }
   }};
   color: ${({ theme, variant, color }) => {
-    if (color) return color
+    if (color) return color;
     switch (variant) {
       case "warning":
-        return theme.colors.dark
+        return theme.colors.dark;
       default:
-        return theme.colors.black
+        return theme.colors.black;
     }
   }};
 
@@ -206,7 +207,7 @@ export const Button = styled.button<{
     opacity: 0.6;
     cursor: not-allowed;
   }
-`
+`;
 
 export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.white};

@@ -4,9 +4,11 @@ import translations from "@/src/constants/translations.json";
 import { Counter } from "@/src/components/common/counter";
 import { WinnerCard } from "@/src/components/common/winner-card";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export const WinnersSection = () => {
   const [winners, setWinners] = useState(translations.landingPage.winnersCards);
+  const { push } = useRouter();
   return (
     <WinnersSectionWrapper>
       <Flex
@@ -51,6 +53,7 @@ export const WinnersSection = () => {
           className="winners__btn"
           padding="0.5rem 5rem"
           fontSize="0.9rem"
+          onClick={() => push("/opt-in-experience")}
         >
           {translations.landingPage.rechargeNowButton}
         </Button>
@@ -84,6 +87,7 @@ export const WinnersSection = () => {
               padding="0.5rem 5rem"
               fontSize="0.9rem"
               className="winners__btn"
+              onClick={() => push("/opt-in-experience")}
             >
               {translations.landingPage.winnerBtnText}
             </Button>
