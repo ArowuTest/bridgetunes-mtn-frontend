@@ -21,7 +21,7 @@ export const PointsAndFAQ = () => {
   // Calculate points: every 100 naira provides 1 point, with a max of 10
   const calculatedPoints =
     rechargedAmount && !isNaN(numericRecharge)
-      ? Math.min(Math.floor(numericRecharge / 100), 10).toString() + " points"
+      ? Math.min(Math.floor(numericRecharge / 100)).toString() + " points"
       : translations.landingPage.calculatePointsBox.pointsPlaceholder;
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

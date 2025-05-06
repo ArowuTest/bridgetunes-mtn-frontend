@@ -22,6 +22,7 @@ const WinnerCardWrapper = styled.div`
   max-width: 400px;
   position: relative;
   overflow: hidden;
+  min-width: fit-content;
 
   .card__confetti {
     position: absolute;
