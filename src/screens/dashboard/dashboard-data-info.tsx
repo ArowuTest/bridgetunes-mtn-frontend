@@ -18,10 +18,10 @@ export const DashboardDataInfo = () => {
           Active
         </p>
 
-        <div className="flex gap-4 items-center">
-          <div className="rounded-full w-20 h-20 bg-yellow-400"></div>
+        <div className="flex md:flex-col lg:flex-row gap-4 md:gap-2 lg:gap-4 md:items-start lg:items-center">
+          <div className="md:hidden lg:block rounded-full w-20 h-20 bg-yellow-400"></div>
           <div className="flex flex-col">
-            <span className="text-xs mb-4">Welcome Back!</span>
+            <span className="text-xs mb-4 md:mb-1 lg:mb-4">Welcome Back!</span>
             <p className="text-md text-white font-semibold capitalize">
               John Lekan
             </p>
@@ -29,7 +29,7 @@ export const DashboardDataInfo = () => {
           </div>
         </div>
 
-        <div className="flex gap-3 items-center">
+        <div className="flex flex-row md:flex-col lg:flex-row gap-3 md:items-start lg:items-center">
           <p className="text-xs">Current point for next draw</p>
           <p className="flex items-center text-yellow-400 text-md">
             <img src="/images/coin.svg" alt="coin" className="mr-2" />
@@ -52,7 +52,7 @@ export const DashboardDataInfo = () => {
         </h4>
 
         <div className="overflow-x-auto">
-          <div className="flex flex-col md:flex-row gap-4 md:gap-8 px-2 min-w-full ">
+          <div className="flex flex-col md:flex-row gap-4 lg:gap-8 lg:px-2 min-w-full ">
             {[
               {
                 icon: <FaRegCalendar color="#FFCC00" />,
@@ -77,14 +77,14 @@ export const DashboardDataInfo = () => {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="w-full mx-auto md:w-1/4 bg-gradient-to-b from-[#FFCC08] to-[#FF9100] p-[0.1rem] rounded-lg"
+                className="w-full mx-auto md:w-1/4 bg-gradient-to-b from-[#FFCC08] to-[#FF9100] p-0.5 rounded-lg"
               >
-                <div className="flex flex-col items-center text-center px-4 py-5 rounded-lg bg-gradient-to-r from-[#101935] to-[#090F21] flex-shrink-0 space-y-4 md:space-y-0">
+                <div className="flex flex-col justify-center items-center text-center w-full h-full py-6 px-4 rounded-lg bg-gradient-to-r from-[#101935] to-[#090F21] flex-shrink-0 space-y-4 md:space-y-0">
                   <div className="mb-2 text-3xl md:text-base">{item.icon}</div>
                   <p className="text-xs text-gray-400 font-semibold">
                     {item.label}
                   </p>
-                  <p className="text-white font-bold text-2xl md:text-lg mt-1">
+                  <p className="text-white font-bold text-2xl md:text-base lg:text-xl mt-1">
                     {item.value}
                   </p>
                 </div>
