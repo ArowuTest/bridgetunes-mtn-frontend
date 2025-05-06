@@ -124,6 +124,19 @@ const Header: React.FC = () => {
                   </Link>
                 ))}
               </nav>
+              {isAuthenticated ? (
+                <Button className="menu__cta__button">Dashboard</Button>
+              ) : (
+                <Button
+                  color="#0056B3"
+                  backgroundColor="transparent"
+                  border="1px solid #2C73DB"
+                  onClick={() => push("/login")}
+                  className="menu__cta__button"
+                >
+                  Login
+                </Button>
+              )}
             </motion.div>
           </>
         )}

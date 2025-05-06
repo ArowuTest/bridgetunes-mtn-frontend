@@ -81,6 +81,13 @@ export const HeaderContainer = styled.header`
     #active {
       color: #ffcc08;
     }
+
+    .menu__cta__button {
+      width: 100%;
+      margin-top: 15px;
+      color: #ffcc08;
+      border: 1px solid #ffcc08;
+    }
   }
 
   @media (max-width: 1024px) {
