@@ -3,9 +3,34 @@ import translations from "@/src/constants/translations.json";
 import { PointsAndFAQWrapper, StyledInput } from "./points-and-faq.style";
 import { FaqBox } from "@/src/components/common/faq-box";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export const PointsAndFAQ = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [rechargedAmount, setRechargedAmount] = useState("");
+  const { push } = useRouter();
+
+  const numericRecharge = parseInt(rechargedAmount) || 0;
+
+  // Display the amount with ₦ prefix if a valid number exists,
+  // otherwise fallback on the translation placeholder.
+  const displayAmount = rechargedAmount
+    ? `₦${numericRecharge}`
+    : translations.landingPage.calculatePointsBox.amountPlaceholder;
+
+  // Calculate points: every 100 naira provides 1 point, with a max of 10
+  const calculatedPoints =
+    rechargedAmount && !isNaN(numericRecharge)
+      ? Math.min(Math.floor(numericRecharge / 100), 10).toString() + " points"
+      : translations.landingPage.calculatePointsBox.pointsPlaceholder;
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Prevent disallowed characters including "e", "+", and "-"
+    if (["e", "E", "+", "-"].includes(e.key)) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <PointsAndFAQWrapper>
       <Flex
@@ -44,6 +69,10 @@ export const PointsAndFAQ = () => {
                 placeholder={
                   translations.landingPage.calculatePointsBox.inputPlaceholder
                 }
+                value={rechargedAmount}
+                type="number"
+                onChange={(e) => setRechargedAmount(e.target.value)}
+                onKeyDown={handleKeyDown}
               />
             </Form>
             <Flex
@@ -55,17 +84,13 @@ export const PointsAndFAQ = () => {
             >
               <StyledInput
                 disabled
-                value={
-                  translations.landingPage.calculatePointsBox.amountPlaceholder
-                }
+                value={displayAmount}
                 className="small__input__box"
               />
               =
               <StyledInput
                 disabled
-                value={
-                  translations.landingPage.calculatePointsBox.pointsPlaceholder
-                }
+                value={calculatedPoints}
                 className="small__input__box"
               />
               =
@@ -135,7 +160,11 @@ export const PointsAndFAQ = () => {
                 It takes just seconds to opt in, and you could be our next big
                 winner!
               </p>
-              <Button padding="0.5rem 3rem" fontSize="0.8rem">
+              <Button
+                padding="0.5rem 3rem"
+                fontSize="0.8rem"
+                onClick={() => push("/opt-in-experience")}
+              >
                 {translations.landingPage.faq.buttonText}
               </Button>
             </div>
