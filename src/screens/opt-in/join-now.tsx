@@ -1,11 +1,28 @@
 import { formatPhone } from "@/src/utils/format-phone"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { userAPI } from "@/src/network/api";
 
 export const JoinNow = () => {
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [formattedPhone, setFormattedPhone] = useState("")
-  const [agreeToTerms, setAgreeToTerms] = useState(false)
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [formattedPhone, setFormattedPhone] = useState("");
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
+
+  const handleOptIn = async () => {
+    let value = "";
+    if (phoneNumber.trim().startsWith("+")) {
+      value = phoneNumber.replaceAll(" ", "").slice(1);
+    } else {
+      value = phoneNumber.replaceAll(" ", "");
+    }
+
+    try {
+      const result = await userAPI.optIn(value);
+      console.log(result);
+    } catch (error: any) {
+      console.log(error);
+    }
+  };
 
   return (
     <section className="bg-[#0B0D24] py-20 px-6 text-white">
@@ -41,11 +58,11 @@ export const JoinNow = () => {
             maxLength={18}
             placeholder="234 081 300 000 00"
             value={formattedPhone}
-            onChange={e => {
-              const raw = e.target.value.replace(/\D/g, "")
-              const formatted = formatPhone(raw)
-              setPhoneNumber(e.target.value)
-              setFormattedPhone(formatted)
+            onChange={(e) => {
+              const raw = e.target.value.replace(/\D/g, "");
+              const formatted = formatPhone(raw);
+              setPhoneNumber(e.target.value.trim());
+              setFormattedPhone(formatted);
             }}
           />
           <p className="text-gray-500 text-xs mt-2">
@@ -94,10 +111,11 @@ export const JoinNow = () => {
         <button
           className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-4 rounded"
           disabled={!agreeToTerms}
+          onClick={() => handleOptIn()}
         >
           Join Now
         </button>
       </motion.div>
     </section>
-  )
-}
+  );
+};

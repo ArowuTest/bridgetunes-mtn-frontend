@@ -57,7 +57,7 @@ export const WinnersSectionWrapper = styled.section`
         .winners__card__wrapper {
           width: 100%;
           box-sizing: border-box;
-          overflow: auto;
+          overflow-x: auto;
 
           @media (max-width: 1200px) {
             justify-content: flex-start;
