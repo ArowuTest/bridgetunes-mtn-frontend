@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { DashboardDataInfo } from "./dashboard-data-info"
 import { DashboardGraphInfo } from "./dashboard-graph-info"
 import { DashboardCountdown } from "./dashboard-countdown"
+import { DashboardNotificationCenter } from "./dashboard-notification-center"
 
 export const DashboardScreen = () => {
   return (
@@ -25,6 +26,7 @@ export const DashboardScreen = () => {
       <DashboardDataInfo />
       <DashboardGraphInfo />
       <DashboardCountdown />
+      <DashboardNotificationCenter />
     </motion.div>
   )
 }
