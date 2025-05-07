@@ -5,10 +5,10 @@ export function PriceStructureTable() {
   const prizeData = [
     {
       prize: "Jackpot (1st Prize)",
-      weekday: "₦1,000,000",
-      saturday: "₦3,000,000",
+      weekday: "₦5,000,000",
+      saturday: "₦10,000,000",
     },
-    { prize: "2nd Prize", weekday: "₦350,000", saturday: "₦1,000,000" },
+    { prize: "2nd Prize", weekday: "₦350,000", saturday: "₦5,000,000" },
     { prize: "3rd Prize", weekday: "₦150,000", saturday: "₦500,000" },
     { prize: "Concession Prize #1", weekday: "₦75,000", saturday: "₦100,000" },
     { prize: "Concession Prize #2", weekday: "₦75,000", saturday: "₦100,000" },

@@ -11,7 +11,7 @@ export const LandingPageWrapper = styled.section<LandingPageWrapperProps>`
   .global-title {
     text-align: center;
     font-size: 1.8rem;
-    color: #6b7280;
+    color: #fff;
     line-height: normal;
   }
 

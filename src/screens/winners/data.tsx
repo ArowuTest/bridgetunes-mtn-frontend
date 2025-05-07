@@ -3,7 +3,7 @@ export const recentWinners = [
     id: 1,
     name: "Adebayo O.",
     phone: "080********45",
-    prize: "₦1,000,000",
+    prize: "₦5,000,000",
     date: "April 22, 2025",
     drawType: "Weekday Jackpot",
     quote:
@@ -43,7 +43,7 @@ export const recentWinners = [
     id: 5,
     name: "Emeka O.",
     phone: "080********67",
-    prize: "₦3,000,000",
+    prize: "₦10,000,000",
     date: "April 20, 2025",
     drawType: "Saturday Special Jackpot",
     quote:
@@ -53,7 +53,7 @@ export const recentWinners = [
     id: 6,
     name: "Fatima Y.",
     phone: "070********34",
-    prize: "₦1,000,000",
+    prize: "₦10,000,000",
     date: "April 20, 2025",
     drawType: "Saturday 2nd Prize",
     quote:
@@ -71,7 +71,7 @@ export const allTimeWinners = [
     id: 7,
     name: "Oluwaseun D.",
     phone: "081********90",
-    prize: "₦1,000,000",
+    prize: "₦5,000,000",
     date: "April 15, 2025",
     drawType: "Weekday Jackpot",
     quote:
@@ -90,7 +90,7 @@ export const allTimeWinners = [
     id: 9,
     name: "Ibrahim M.",
     phone: "080********78",
-    prize: "₦3,000,000",
+    prize: "₦10,000,000",
     date: "April 13, 2025",
     drawType: "Saturday Special Jackpot",
     quote:

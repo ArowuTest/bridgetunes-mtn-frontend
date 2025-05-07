@@ -33,7 +33,7 @@ export const FeaturedPrizes = () => {
             <h4 className="bg-[#0056B3] text-lg xl:text-xl text-white font-semibold py-1 px-4 rounded-lg inline-block mb-1">
               Weekday Jackpot
             </h4>
-            <h3 className="text-3xl xl:text-4xl font-black pb-3">₦1,000,000</h3>
+            <h3 className="text-3xl xl:text-4xl font-black pb-3">₦5,000,000</h3>
             <p className="text-sm font-light text-left">
               Our weekday jackpot is awarded to one lucky winner in each daily
               draw from Monday to Friday. Remember, you must opt-in to be
@@ -52,7 +52,7 @@ export const FeaturedPrizes = () => {
             <h4 className="bg-[#0056B3] text-lg xl:text-xl text-white font-semibold py-1 px-4 rounded-lg inline-block mb-1">
               Saturday Special Jackpot
             </h4>
-            <h3 className="text-3xl xl:text-4xl font-black pb-3">₦3,000,000</h3>
+            <h3 className="text-3xl xl:text-4xl font-black pb-3">₦10,000,000</h3>
             <p className="text-sm font-light text-left">
               Our Saturday special jackpot is three times the value of weekday
               jackpots! Don't miss your chance to win big in our weekend draws.
@@ -71,7 +71,7 @@ export const FeaturedPrizes = () => {
               Rollover Jackpots
             </h4>
             <h3 className="text-3xl xl:text-4xl font-black pb-3">
-              ₦1,000,000+
+              ₦5,000,000+
             </h3>
             <p className="text-sm font-light text-left">
               If a non-opted-in participant is selected for the jackpot, the

@@ -187,7 +187,7 @@ export function CalendarDetail() {
                       <p className="text-gray-400 text-sm">080*****430</p>
                     </div>
                     <p className="text-yellow-400 text-sm font-semibold">
-                      ₦1,000,000
+                      ₦3,000,000
                     </p>
                   </div>
                 </div>

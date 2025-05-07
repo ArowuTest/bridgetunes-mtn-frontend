@@ -7,10 +7,10 @@ import { WhyJoin } from "./why-join"
 export const OptInScreen: React.FC = () => {
   return (
     <div>
+      <JoinNow />
       <SimpleSteps />
       <WhyJoin />
       <TermsAndConditionsMadeEasy />
-      <JoinNow />
     </div>
-  )
+  );
 }

@@ -74,6 +74,20 @@ export const PrizeCard = styled.div`
       max-width: 250px;
     }
 
+    .prize__text {
+      background: repeating-linear-gradient(
+          rgb(255, 215, 0),
+          rgb(221, 121, 0),
+          rgb(255, 215, 0) 60%
+        )
+        text;
+      font-size: 2.1rem;
+      font-weight: 700;
+      -webkit-text-fill-color: transparent;
+      font-family: "Montserrat";
+      color: rgb(255, 215, 0);
+    }
+
     p {
       text-align: center;
       color: #6b7280;

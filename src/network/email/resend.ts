@@ -77,8 +77,8 @@ export const sendSignupConfirmationEmail = async (email: string, name?: string) 
         <p>Remember, you must opt-in to be eligible for jackpot prizes. You've already completed this step!</p>
         <div style="background-color: #f5f5f5; padding: 15px; margin: 20px 0; border-left: 4px solid #FFCC00;">
           <p style="margin: 0;"><strong>Prize Structure:</strong></p>
-          <p style="margin: 5px 0;">Weekday Jackpot: ₦1,000,000</p>
-          <p style="margin: 5px 0;">Saturday Special Jackpot: ₦3,000,000</p>
+          <p style="margin: 5px 0;">Weekday Jackpot: ₦5,000,000</p>
+          <p style="margin: 5px 0;">Saturday Special Jackpot: ₦10,000,000</p>
         </div>
         <p>Good luck!</p>
         <p>The MTN MyNumba Don Win Team</p>

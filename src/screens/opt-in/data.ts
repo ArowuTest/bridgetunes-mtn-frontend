@@ -2,19 +2,19 @@ export const joinSteps = [
   {
     icon: "/images/step1.png",
     title: "Step 1:",
-    desc: "Learn about the amazing prizes you could win",
+    desc: "Opt-In to be eligible to participate and win a prize.",
   },
   {
     icon: "/images/step2.png",
     title: "Step 2:",
-    desc: "Understand how points work and how to maximize your chances",
+    desc: "Recharge your MTN line, understand how points work and how to maximise your chances.",
   },
   {
     icon: "/images/step3.png",
     title: "Step 3:",
-    desc: "Confirm your participation and start winning!",
+    desc: "Keep up with draw results and claim your prizes when you win.",
   },
-]
+];
 
 export const whyJoin = [
   {
@@ -27,7 +27,7 @@ export const whyJoin = [
   {
     title: "Benefit 2:",
     label: "Simple Point System",
-    desc: "The more you recharge, the more chances you have to win!",
+    desc: "The more you recharge, the more chances you have to win. The points reflect how many times your number is entered into the draw",
     bg: "bg-[#0056B3]",
     image: "/images/benefit-2.png",
   },
@@ -45,4 +45,4 @@ export const whyJoin = [
     bg: "bg-yellow-400",
     image: "/images/benefit-4.png",
   },
-]
+];

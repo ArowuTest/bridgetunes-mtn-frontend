@@ -43,7 +43,7 @@ export const WinnersSection = () => {
           >
             <img
               className="price__image"
-              src="/images/landing-page/1-milli.png"
+              src="/images/landing-page/5million.png"
               alt="price amount"
             />
             <p className="jackpot__text">Jackpot Up For Grabs!</p>

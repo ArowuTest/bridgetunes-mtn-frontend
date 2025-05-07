@@ -64,7 +64,7 @@ export const HearFromOurWinners = () => {
                       color: "#FFD700", // Fallback solid color
                     }}
                   >
-                    ₦1,000,000!
+                    ₦5,000,000!
                   </p>
                 </div>
               </div>

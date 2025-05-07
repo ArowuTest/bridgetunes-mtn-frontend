@@ -1,8 +1,8 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 type HowWeSelectWinnersProps = {
-  header: React.ReactNode
-}
+  header: React.ReactNode;
+};
 export const HowWeSelectWinners = ({ header }: HowWeSelectWinnersProps) => {
   return (
     <section className="py-20 px-6 bg-[#090F21]">
@@ -25,9 +25,9 @@ export const HowWeSelectWinners = ({ header }: HowWeSelectWinnersProps) => {
           <p className="text-gray-400 text-md leading-relaxed">
             Our draw process is designed to be completely fair and transparent.
             Winners are selected using a random number generator that picks from
-            the pool of eligible participants. For daily draws, numbers are
-            filtered based on the last digit (Monday draws for numbers ending in
-            0 & 1, Tuesday for 2 & 3, etc.).
+            the pool of eligible participants. For daily draws and weekly
+            numbers all numbers who have opted-in and recharged within the draw
+            window are eligible to participate.
           </p>
 
           <p className="text-gray-400 text-md leading-relaxed">
@@ -38,12 +38,11 @@ export const HowWeSelectWinners = ({ header }: HowWeSelectWinnersProps) => {
           </p>
 
           <p className="text-gray-400 text-md leading-relaxed">
-            For the jackpot prize, winners must have opted in to be eligible. If
-            a non-opted-in participant is selected for the jackpot, the prize
-            rolls over to the next draw, increasing the potential winnings.
+            Only MTN subscribers who have opted in and recharged after opting in
+            are eligible to participate in the draws.
           </p>
         </article>
       </motion.div>
     </section>
-  )
-}
+  );
+};

@@ -56,6 +56,7 @@ export const LifeChangingSection = () => {
                     variants={pulseVariants}
                     animate="animate"
                   />
+                  {/* <p className="prize__text">{card.price}</p> */}
                   <p className="bottom__text">{card.bottomText}</p>
                 </div>
               </PrizeCard>
