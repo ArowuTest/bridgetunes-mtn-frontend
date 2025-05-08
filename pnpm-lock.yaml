@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@radix-ui/react-slot':
+        specifier: ^1.2.2
+        version: 1.2.2(@types/react@18.3.20)(react@18.3.1)
       '@types/styled-components':
         specifier: 5.1.34
         version: 5.1.34
@@ -17,9 +20,15 @@ importers:
       chart.js:
         specifier: ^4.4.0
         version: 4.4.9
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -29,6 +38,9 @@ importers:
       js-cookie:
         specifier: ^3.0.5
         version: 3.0.5
+      lucide-react:
+        specifier: ^0.508.0
+        version: 0.508.0(react@18.3.1)
       next:
         specifier: ^14.2.28
         version: 14.2.28(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -44,6 +56,9 @@ importers:
       react-datepicker:
         specifier: ^4.21.0
         version: 4.25.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-day-picker:
+        specifier: ^8.10.1
+        version: 8.10.1(date-fns@2.30.0)(react@18.3.1)
       react-dom:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
@@ -62,6 +77,12 @@ importers:
       styled-components:
         specifier: 6.1.17
         version: 6.1.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      tailwind-merge:
+        specifier: ^3.2.0
+        version: 3.2.0
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.17)
     devDependencies:
       '@types/js-cookie':
         specifier: ^3.0.6
@@ -272,6 +293,24 @@ packages:
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
+  '@radix-ui/react-compose-refs@1.1.2':
+    resolution: {integrity: sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  '@radix-ui/react-slot@1.2.2':
+    resolution: {integrity: sha512-y7TBO4xN4Y94FvcWIOIh18fM4R1A8S4q1jhoz4PNzOoHsFcN8pogcFmZrTYAm4F9VRUrWP/Mw7xSKybIeRI+CQ==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -650,6 +689,9 @@ packages:
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
+
+  class-variance-authority@0.7.1:
+    resolution: {integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==}
 
   classnames@2.5.1:
     resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
@@ -1402,6 +1444,11 @@ packages:
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
+  lucide-react@0.508.0:
+    resolution: {integrity: sha512-gcP16PnexqtOFrTtv98kVsGzTfnbPekzZiQfByi2S89xfk7E/4uKE1USZqccIp58v42LqkO7MuwpCqshwSrJCg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   match-sorter@6.3.4:
     resolution: {integrity: sha512-jfZW7cWS5y/1xswZo8VBOdudUiSd9nifYRWphc9M5D/ee4w4AoXLgBEdRbgVaxbMuagBPeUC5y2Hi8DO6o9aDg==}
 
@@ -1692,6 +1739,12 @@ packages:
       react: ^16.9.0 || ^17 || ^18
       react-dom: ^16.9.0 || ^17 || ^18
 
+  react-day-picker@8.10.1:
+    resolution: {integrity: sha512-TMx7fNbhLk15eqcMt+7Z7S2KF7mfTId/XJDjKE8f+IUcFn0l08/kI4FiYTL/0yuOLmEcbR4Fwe3GJf/NiiMnPA==}
+    peerDependencies:
+      date-fns: ^2.28.0 || ^3.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
   react-dom@18.3.1:
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
@@ -1978,6 +2031,14 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  tailwind-merge@3.2.0:
+    resolution: {integrity: sha512-FQT/OVqCD+7edmmJpsgCsY820RTD5AkBryuG5IUqR5YQZSdj5xlH5nLgH7YPths7WsLPSpSBNneJdM8aS8aeFA==}
+
+  tailwindcss-animate@1.0.7:
+    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
 
   tailwindcss@3.4.17:
     resolution: {integrity: sha512-w33E2aCvSDP0tW9RZuNXadXlkHXqFzSkQew/aIa2i/Sj8fThxwovwlXHSPXTbAHwEIhBFXAedUhP2tueAKP8Og==}
@@ -2290,6 +2351,19 @@ snapshots:
     optional: true
 
   '@popperjs/core@2.11.8': {}
+
+  '@radix-ui/react-compose-refs@1.1.2(@types/react@18.3.20)(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+    optionalDependencies:
+      '@types/react': 18.3.20
+
+  '@radix-ui/react-slot@1.2.2(@types/react@18.3.20)(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.2(@types/react@18.3.20)(react@18.3.1)
+      react: 18.3.1
+    optionalDependencies:
+      '@types/react': 18.3.20
 
   '@rtsao/scc@1.1.0': {}
 
@@ -2689,6 +2763,10 @@ snapshots:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+
+  class-variance-authority@0.7.1:
+    dependencies:
+      clsx: 2.1.1
 
   classnames@2.5.1: {}
 
@@ -3580,6 +3658,10 @@ snapshots:
 
   lru-cache@10.4.3: {}
 
+  lucide-react@0.508.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   match-sorter@6.3.4:
     dependencies:
       '@babel/runtime': 7.27.1
@@ -3856,6 +3938,11 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-onclickoutside: 6.13.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-popper: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+
+  react-day-picker@8.10.1(date-fns@2.30.0)(react@18.3.1):
+    dependencies:
+      date-fns: 2.30.0
+      react: 18.3.1
 
   react-dom@18.3.1(react@18.3.1):
     dependencies:
@@ -4200,6 +4287,12 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  tailwind-merge@3.2.0: {}
+
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.17):
+    dependencies:
+      tailwindcss: 3.4.17
 
   tailwindcss@3.4.17:
     dependencies:
