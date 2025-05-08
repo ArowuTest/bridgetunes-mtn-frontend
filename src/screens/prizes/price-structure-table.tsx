@@ -8,20 +8,17 @@ export function PriceStructureTable() {
       weekday: "₦5,000,000",
       saturday: "₦10,000,000",
     },
-    { prize: "2nd Prize", weekday: "₦350,000", saturday: "₦5,000,000" },
-    { prize: "3rd Prize", weekday: "₦150,000", saturday: "₦500,000" },
-    { prize: "Concession Prize #1", weekday: "₦75,000", saturday: "₦100,000" },
-    { prize: "Concession Prize #2", weekday: "₦75,000", saturday: "₦100,000" },
-    { prize: "Concession Prize #3", weekday: "₦75,000", saturday: "₦100,000" },
-    { prize: "Concession Prize #4", weekday: "₦75,000", saturday: "₦100,000" },
-    { prize: "Concession Prize #4", weekday: "₦75,000", saturday: "₦100,000" },
-    { prize: "Concession Prize #5", weekday: "₦75,000", saturday: "₦100,000" },
-    { prize: "Concession Prize #6", weekday: "₦75,000", saturday: "₦100,000" },
-  ]
+    { prize: "2nd Prize", weekday: "₦1,000,000", saturday: "₦2,000,000" },
+    { prize: "3rd Prize", weekday: "₦500,000", saturday: "₦1,000,000" },
+    { prize: "Concession Prize #1", weekday: "₦100,000", saturday: "₦100,000" },
+    { prize: "Concession Prize #2", weekday: "₦75,000", saturday: "₦75,000" },
+    { prize: "Concession Prize #3", weekday: "₦50,000", saturday: "₦50,000" },
+    { prize: "Concession Prize #4", weekday: "₦25,000", saturday: "₦25,000" },
+  ];
 
   // Calculate totals
-  const weekdayTotal = "₦2,025,000"
-  const saturdayTotal = "₦5,200,000"
+  const weekdayTotal = "₦11,000,000";
+  const saturdayTotal = "₦23,450,000";
 
   return (
     <motion.div

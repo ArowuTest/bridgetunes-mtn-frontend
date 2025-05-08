@@ -187,7 +187,7 @@ export function CalendarDetail() {
                       <p className="text-gray-400 text-sm">080*****430</p>
                     </div>
                     <p className="text-yellow-400 text-sm font-semibold">
-                      ₦3,000,000
+                      ₦5,000,000
                     </p>
                   </div>
                 </div>
@@ -205,7 +205,7 @@ export function CalendarDetail() {
                       <p className="text-gray-400 text-sm">080*****430</p>
                     </div>
                     <p className="text-yellow-400 text-sm font-light">
-                      ₦350,000
+                      ₦1,000,000
                     </p>
                   </div>
                 </div>
@@ -223,7 +223,7 @@ export function CalendarDetail() {
                       <p className="text-gray-400 text-sm">080*****430</p>
                     </div>
                     <p className="text-yellow-400 text-sm font-light">
-                      ₦150,000
+                      ₦500,000
                     </p>
                   </div>
                 </div>
@@ -242,7 +242,7 @@ export function CalendarDetail() {
                       </p>
                     </div>
                     <p className="text-yellow-400 text-sm font-light">
-                      7 x ₦75,000
+                      ₦25,000 - ₦100,000
                     </p>
                   </div>
                 </div>

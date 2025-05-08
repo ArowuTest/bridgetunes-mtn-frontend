@@ -1,6 +1,6 @@
 {
   "landingPage": {
-    "heroText": "Turn Your Recharges Into Millions!",
+    "heroText": "MTN MAD BILLION PROMO",
     "heroDesc": "Every recharge gives you points. Every point is a chance to win big in the MTN MyNumba Don Win promotion.",
     "firstButton": "Opt-In Now",
     "secondButton": "Check Your Points",
@@ -40,7 +40,7 @@
       },
       {
         "title": "Step 4",
-        "desc": "Win big and receive your prize directly to your account!",
+        "desc": "Win Big And Receive Your Prize Directly To Your MoMo Account",
         "image": "/images/landing-page/step-4.png"
       }
     ],
@@ -88,12 +88,12 @@
           "content": "The “MyNumba Don Win” promo is a promotional activity that offers subscribers of MTN the chance to win cash prizes just by performing top-up on their account and with no extra cost."
         },
         {
-          "title": "Can I cancel my subscription at any time?",
-          "content": "Yes, you can cancel your registration at any time."
-        },
-        {
           "title": "How do I collect points in the promotion?",
           "content": "You collect points just by performing top ups throughout the duration of the promotion."
+        },
+        {
+          "title": "Is there a cost for participating to the promotion?",
+          "content": "No new added cost, you only need to opt-in to the promo event and continue to recharge your mobile phone as you normally do, there is no extra cost for participating in the promotion."
         },
         {
           "title": "How many times can I top up?",

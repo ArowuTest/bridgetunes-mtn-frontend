@@ -95,13 +95,13 @@ export const PointsAndFAQ = () => {
                 value={displayAmount}
                 className="small__input__box"
               />
-              =
+              <span>=</span>
               <StyledInput
                 disabled
                 value={calculatedPoints}
                 className="small__input__box"
               />
-              =
+              <span>=</span>
               <StyledInput
                 disabled
                 className="result__input__box"

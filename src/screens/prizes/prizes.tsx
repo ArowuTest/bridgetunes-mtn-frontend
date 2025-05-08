@@ -58,10 +58,10 @@ export const PrizesScreen = () => {
           viewport={{ once: true }}
         >
           <p className="text-sm text-left py-2 px-8">
-            <strong>Important:</strong> To be eligible for the jackpot prize,
-            you must opt-in to the promotion. If a non-opted-in participant is
-            selected for the jackpot, the prize rolls over to the next draw,
-            increasing the potential winnings!
+            <strong>Important:</strong> To be eligible for any of the prizes,
+            you must have opted-in to the promotion and recharged your opted-in
+            MTN number. Subscribers who have not opted-in are inelligible for
+            this event!
           </p>
         </motion.div>
       </PatternBG>
@@ -71,5 +71,5 @@ export const PrizesScreen = () => {
       <HowWeSelectWinners />
       <PriceDisbursement />
     </div>
-  )
+  );
 }
