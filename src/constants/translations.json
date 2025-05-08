@@ -78,7 +78,7 @@
       "amountPlaceholder": "₦[Amount]",
       "pointsPlaceholder": "[X] points",
       "calculateButton": "[X] chances to win!",
-      "pointsTip": "Pro tip: Recharge ₦1,000 or more to earn maximum points (10)!"
+      "pointsTip": "Recharge to improve your chances"
     },
     "faq": {
       "title": "Got Questions? We've Got Answers",
@@ -110,7 +110,7 @@
       "links": [
         { "title": "Home", "link": "/" },
         { "title": "Opt-In", "link": "/opt-in-experience" },
-        { "title": "Draw Management", "link": "/draw-management" },
+        { "title": "FAQ", "link": "/faqs" },
         { "title": "Admin Dashboard", "link": "/admin-dashboard" }
       ]
     },
