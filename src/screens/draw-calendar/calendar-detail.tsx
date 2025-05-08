@@ -3,6 +3,7 @@ import { GiTrophyCup } from "react-icons/gi"
 import { motion } from "framer-motion"
 import { Calendar } from "@/components/ui/calendar"
 import { useAuth } from "@/src/contexts/AuthContext"
+import { addDays, isSameDay, startOfDay } from "date-fns"
 
 type PrizeInfo = {
   jackpot: number
@@ -28,11 +29,17 @@ const SATURDAY_PRIZES: PrizeInfo = {
 export function CalendarDetail() {
   const { isAuthenticated } = useAuth()
   const today = new Date()
-  const [date, setDate] = useState<Date | undefined>(new Date())
+  const tomorrow = addDays(today, 1)
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(today)
 
   // Determine if the selected date is a Saturday
   const isSaturday = selectedDate?.getDay() === 6
+
+  const isUpcoming = (date: Date) => {
+    const normalizedDate = startOfDay(date)
+    const normalizedTomorrow = startOfDay(tomorrow)
+    return isSameDay(normalizedDate, normalizedTomorrow)
+  }
 
   // Choose the appropriate prize structure
   const prizes = isSaturday ? SATURDAY_PRIZES : DAILY_PRIZES
@@ -74,15 +81,18 @@ export function CalendarDetail() {
           <div className="py-6 px-12 max-w-lg mx-auto">
             <Calendar
               mode="single"
-              selected={date}
-              onSelect={setDate}
+              selected={selectedDate}
+              onSelect={setSelectedDate}
               className="rounded-md"
               modifiers={{
                 saturday: date => date.getDay() === 6,
+                today: date => isSameDay(date, today),
+                upcoming: isUpcoming,
               }}
               modifiersClassNames={{
                 saturday: "bg-pink-500",
                 today: "bg-green-600 text-white",
+                upcoming: "bg-blue-600 text-white",
               }}
             />
           </div>
