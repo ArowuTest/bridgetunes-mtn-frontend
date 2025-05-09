@@ -60,6 +60,9 @@ export const HeroSection = () => {
           variants={contentVariants}
         >
           <h1 className="hero__text">{translations.landingPage.heroText}</h1>
+          <h3 className="hero__subText__1">
+            {translations.landingPage.heroSubText}
+          </h3>
           <h4 className="hero__sub__section">
             {translations.landingPage.heroDesc}
           </h4>
