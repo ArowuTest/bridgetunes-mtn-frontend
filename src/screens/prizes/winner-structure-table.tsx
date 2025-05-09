@@ -4,22 +4,26 @@ import { motion } from "framer-motion"
 export function WinnerStructureTable() {
   const winnerData = [
     {
-      amount: "₦100 - ₦199",
+      amount: "Users who top-up ₦100-₦299",
       points: "1 point",
     },
     {
-      amount: "₦200 - ₦499",
+      amount: "Users who top-up ₦200-₦399",
       points: "2 points",
     },
     {
-      amount: "₦500 - ₦999",
-      points: "5 points",
+      amount: "Users who top-up ₦300-₦499",
+      points: "3 points",
     },
     {
-      amount: "₦1,000 and above",
-      points: "10 points",
+      amount: "Users who top-up ₦400-₦599",
+      points: "4 points",
     },
-  ]
+    {
+      amount: "Every additional ₦100 bracket gives an additional 1 point",
+      points: "",
+    },
+  ];
 
   return (
     <motion.div

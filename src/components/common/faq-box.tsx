@@ -32,7 +32,7 @@ const FaqBoxWrapper = styled.div`
   .content__wrapper {
     .title {
       color: #6b7280;
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 600;
     }
 

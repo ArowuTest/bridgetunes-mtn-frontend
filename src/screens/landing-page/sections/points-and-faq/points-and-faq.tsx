@@ -24,6 +24,14 @@ export const PointsAndFAQ = () => {
       ? Math.min(Math.floor(numericRecharge / 100)).toString() + " points"
       : translations.landingPage.calculatePointsBox.pointsPlaceholder;
 
+  // Calculate number of times entered in draw
+  const calculatedNumOfTimeEnteredInDraw =
+    rechargedAmount && !isNaN(numericRecharge)
+      ? "Number entered " +
+        Math.min(Math.floor(numericRecharge / 100)).toString() +
+        "x in draw"
+      : translations.landingPage.calculatePointsBox.pointsPlaceholder;
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     // Prevent disallowed characters including "e", "+", and "-"
     if (["e", "E", "+", "-"].includes(e.key)) {
@@ -87,19 +95,17 @@ export const PointsAndFAQ = () => {
                 value={displayAmount}
                 className="small__input__box"
               />
-              =
+              <span>=</span>
               <StyledInput
                 disabled
                 value={calculatedPoints}
                 className="small__input__box"
               />
-              =
+              <span>=</span>
               <StyledInput
                 disabled
                 className="result__input__box"
-                value={
-                  translations.landingPage.calculatePointsBox.calculateButton
-                }
+                value={calculatedNumOfTimeEnteredInDraw}
               />
             </Flex>
             <p className="tips__text">

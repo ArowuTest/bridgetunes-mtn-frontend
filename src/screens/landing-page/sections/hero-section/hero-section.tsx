@@ -5,6 +5,7 @@ import { HeroSectionWrapper } from "./hero-section.styles";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import ConfettiBox from "@/src/components/common/confetti-box";
+import { useAuth } from "@/src/contexts/AuthContext";
 
 const contentVariants = {
   hidden: {
@@ -21,6 +22,7 @@ const contentVariants = {
 export const HeroSection = () => {
   const { push } = useRouter();
   const [showConfettiImage, setShowConfettiImage] = useState(false);
+  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
     const timer = setTimeout(() => setShowConfettiImage(true), 4500);
@@ -74,6 +76,9 @@ export const HeroSection = () => {
               backgroundColor="#0056B3"
               color="#fff"
               padding="0.7rem 3.5rem"
+              onClick={() =>
+                isAuthenticated ? push("/dashboard") : push("/login")
+              }
             >
               {translations.landingPage.secondButton}
             </Button>

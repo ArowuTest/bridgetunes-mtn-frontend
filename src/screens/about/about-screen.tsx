@@ -44,7 +44,8 @@ export const AboutScreen = () => {
               MTN MyNumba Don Win is an exciting promotion designed to reward
               MTN customers for their loyalty. Launched in partnership with
               Bridgetunes, this promotion gives MTN subscribers the chance to
-              win amazing cash prizes simply by topping up their MTN lines.
+              win amazing cash prizes simply by <b>Opting into the promo </b>
+              and topping up their MTN lines.
             </p>
 
             <p className="text-black text-sm md:text-md mt-8 text-left">
@@ -180,5 +181,5 @@ export const AboutScreen = () => {
         </motion.div>
       </section>
     </div>
-  )
+  );
 }

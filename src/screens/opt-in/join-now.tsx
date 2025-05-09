@@ -37,7 +37,7 @@ export const JoinNow = () => {
           Welcome To MyNumba Don Win!
         </h2>
         <p className="text-gray-400 text-sm">
-          Recharge Your Phone Now To Start Earning Points
+          Opt-In by entering your MTN phone number below
         </p>
       </motion.div>
 
@@ -71,9 +71,7 @@ export const JoinNow = () => {
         </div>
 
         <div className="flex flex-col mb-6 max-w-xs mx-auto items-center">
-          <p className="text-gray-400 text-xs mb-2">
-            You Can Also Register By:
-          </p>
+          <p className="text-gray-400 text-xs mb-2">You Can Also Opt-In By:</p>
           <ul className="text-gray-400 text-xs space-y-2 mb-2">
             <li className="flex items-center">
               <span className="mr-2">•</span> Sending "JOIN" To 5050

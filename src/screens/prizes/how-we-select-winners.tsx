@@ -16,9 +16,17 @@ export const HowWeSelectWinners = () => {
           How We Select Winners
         </h2>
 
-        <p className="text-white/70 text-sm md:text-md text-center">
-          The more you top up your MTN line, the more points you earn, and the
-          higher your chances of winning! Here's how points are allocated
+        <p className="text-white/70 text-sm md:text-md text-center max-w-4xl">
+          Winners are selected through a cryptographic secure and fair random
+          selection. The more you top up your MTN line, the more points you
+          earn, and the higher your chances of winning!. The points determine
+          how many times your MTN number is entered into a draw.
+          <br />
+          <br />
+          <span>
+            Here's how points are allocated. Each N100 recharge gives 1 point,
+            see example table below.
+          </span>
         </p>
       </motion.div>
 
@@ -26,5 +34,5 @@ export const HowWeSelectWinners = () => {
         <WinnerStructureTable />
       </div>
     </section>
-  )
+  );
 }

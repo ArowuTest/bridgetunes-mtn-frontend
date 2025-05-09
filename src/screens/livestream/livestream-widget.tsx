@@ -26,7 +26,7 @@ export const LivestreamWidget = () => {
             Watch our daily and weekly draws live to see winners selected in
             real-time! All draws are conducted transparently under the
             supervision of regulatory authorities. Tune in every weekday at 7:00
-            PM WAT and Saturdays at 8:00 PM WAT for our special draws.
+            PM WAT and Saturdays at 7:00 PM WAT for our special draws.
           </p>
         </motion.div>
       </div>

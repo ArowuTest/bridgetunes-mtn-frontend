@@ -52,10 +52,10 @@ export const WinnersHero = () => {
       >
         <p className="text-sm text-left py-2 px-8">
           <strong>Could you be next?</strong> Make sure you opt-in to be
-          eligible for jackpot prizes. Top up your MTN line regularly to
+          eligible. Once you have opted-in, top up your MTN line regularly to
           increase your chances of winning in our daily and weekly draws.
         </p>
       </motion.div>
     </PatternBG>
-  )
+  );
 }

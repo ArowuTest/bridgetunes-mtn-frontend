@@ -36,16 +36,24 @@ export const PointsAndFAQWrapper = styled.div`
           text-transform: capitalize;
         }
 
+        .results__wrapper {
+          flex-wrap: wrap;
+        }
+
         .small__input__box {
-          max-width: 120px;
           color: #ffcc08;
           text-align: center;
+          font-size: 0.9rem;
+          width: fit-content;
+          flex-grow: 1;
+          width: 120px;
         }
 
         .result__input__box {
-          max-width: 200px;
           background: linear-gradient(90deg, #0056b3 0%, #8b5cf6 100%);
           text-align: center;
+          font-size: 0.9rem;
+          max-width: 100%;
         }
 
         .tips__text {
@@ -147,6 +155,10 @@ export const PointsAndFAQWrapper = styled.div`
           .results__wrapper {
             flex-wrap: wrap;
             justify-content: center;
+          }
+
+          .result__input__box {
+            max-width: calc(100% - 30px);
           }
 
           .tips__text {

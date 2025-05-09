@@ -12,7 +12,7 @@ export const DontMissOurNextDraw = () => {
       >
         <p className="text-sm text-left py-2 px-8">
           <strong>Don't miss our next draw!</strong> Set a reminder to watch our
-          livestreams every weekday at 7:00 PM WAT and Saturdays at 8:00 PM WAT.
+          livestreams every weekday at 7:00 PM WAT and Saturdays at 7:00 PM WAT.
           You might see your number selected as a winner!
         </p>
       </motion.div>

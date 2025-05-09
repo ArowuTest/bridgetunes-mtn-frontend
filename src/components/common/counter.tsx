@@ -62,15 +62,15 @@ const TimeInner = styled.span`
 
 const Label = styled.div`
   margin-top: 4px;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   color: #6b7280;
-  font-family: Montserrat;
+  font-family: "Monospace";
   font-weight: 400;
   letter-spacing: 1px;
 
   @media (min-width: 600px) {
     margin-top: 8px;
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
 `;
 
