@@ -73,7 +73,7 @@ export const FeaturedPrizes = () => {
               Amazing Consolation Prizes
             </h4>
             <h3 className="text-3xl xl:text-4xl font-black pb-3">
-              ₦5,000,000+
+              ₦19,000,000+
             </h3>
             <p className="text-sm font-light text-left">
               Each week days consolation prizes is N6,000,00 and Saturdays
