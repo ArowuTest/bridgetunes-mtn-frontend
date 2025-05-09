@@ -14,15 +14,16 @@ export const TermsAndConditionsMadeEasy = () => {
 
   const tabContent: Record<TabKey, string> = {
     Eligibility:
-      "Winnings Sent Directly To Your Account! Winnings Sent Directly To Your Account! Winnings Sent Directly To Your Account! Winnings Sent Directly To Your Account! Winnings Sent Directly To Your Account! Winnings Sent Directly To Your Account!",
+      "In order to be eligible to participate you must be above 18, you must have opted in to the promo event through one of our opt-In channels. In order to be eligible for a draw you must  satisfy the above conditions and recharged your MTN line during the draw window.",
     "How Points Work":
-      "Learn how points are earned and calculated based on your recharges and transactions.",
+      "Points are awarded based on the value of your recharge, every N100 recharge gives you 1 point. The points reflects how many times your MTN number will be entered into the eligible daily or weekly draws.",
     "Draw Process":
       "Our transparent draw process ensures fair selection of winners every time.",
-    "Prize Collection": "Discover how to collect your prizes when you win!",
+    "Prize Collection":
+      "Winners will be notified immediately after each draw and the customer support team will guide you through the prize redemption process. All redeemed prizes will be paid into your MoMo wallets. If you don't have a MoMo wallet you can dial *671# on your MTN line to have one opened for you.",
     "Important Dates":
       "Mark your calendar for upcoming draws and promotional periods.",
-  }
+  };
 
   return (
     <PatternBG className="px-6 py-24">

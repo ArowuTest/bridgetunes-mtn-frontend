@@ -25,7 +25,7 @@ export const PriceDisbursement = () => {
           <p className="text-white/80 text-sm md:text-md mt-6 text-left font-light">
             All prizes are disbursed within 48 hours of the draw. Winners are
             notified via SMS, and prizes are credited directly to the winner's
-            MTN account or through mobile money transfer.
+            MoMo account.
           </p>
 
           <p className="text-white/80 text-sm md:text-md mt-6 text-left font-light">

@@ -54,8 +54,15 @@ export const HeroSectionWrapper = styled.div<HeroSectionWrapperProps>`
       color: #ffffff;
     }
 
-    .hero__sub__section {
+    .hero__subText__1 {
       font-size: 1.8rem;
+      color: #ffffff;
+      font-weight: 600;
+      font-family: Montserrat, sans-serif;
+    }
+
+    .hero__sub__section {
+      font-size: 1.5rem;
       color: #ffffff;
       font-weight: 600;
       font-family: Montserrat, sans-serif;
@@ -77,8 +84,12 @@ export const HeroSectionWrapper = styled.div<HeroSectionWrapperProps>`
         font-size: 2.8rem;
       }
 
-      .hero__sub__section {
+      .hero__subText__1 {
         font-size: 1.5rem;
+      }
+
+      .hero__sub__section {
+        font-size: 1.35rem;
       }
     }
   }
@@ -100,8 +111,12 @@ export const HeroSectionWrapper = styled.div<HeroSectionWrapperProps>`
         font-size: 2rem;
       }
 
+      .hero__subText__1 {
+        font-size: 1.2rem;
+      }
+
       .hero__sub__section {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         font-weight: 500;
       }
 
