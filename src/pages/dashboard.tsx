@@ -7,12 +7,12 @@ const Dashboard: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Dashboard | MTN MyNumba Don Win</title>
+        <title>Dashboard | MTN One Billion MAD Promo</title>
       </Head>
 
       <DashboardScreen />
     </Layout>
-  )
+  );
 }
 
 export default Dashboard

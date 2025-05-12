@@ -7,16 +7,16 @@ const AboutPage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>About | MTN MyNumba Don Win</title>
+        <title>About | MTN One Billion MAD Promo</title>
         <meta
           name="description"
-          content="Learn about the MTN MyNumba Don Win promotion, how it works, and the team behind it."
+          content="Learn about the MTN One Billion MAD Promo, how it works, and the team behind it."
         />
       </Head>
 
       <AboutScreen />
     </Layout>
-  )
+  );
 }
 
 export default AboutPage

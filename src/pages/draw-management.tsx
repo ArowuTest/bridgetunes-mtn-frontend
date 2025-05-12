@@ -63,7 +63,7 @@ const DrawManagement: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Draw Management | MTN MyNumba Don Win</title>
+        <title>Draw Management | MTN One Billion MAD Promo</title>
       </Head>
 
       <DrawManagementContainer>
@@ -72,7 +72,7 @@ const DrawManagement: React.FC = () => {
             <DrawSelector
               draws={draws}
               selectedDraw={selectedDraw}
-              onSelectDraw={draw => setSelectedDraw(draw)}
+              onSelectDraw={(draw) => setSelectedDraw(draw)}
             />
           </Col>
           <Col span={7}>
@@ -81,7 +81,7 @@ const DrawManagement: React.FC = () => {
         </Grid>
       </DrawManagementContainer>
     </Layout>
-  )
+  );
 }
 
 export default DrawManagement

@@ -32,7 +32,7 @@ const NotificationManagement: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Notification Management | MTN MyNumba Don Win</title>
+        <title>Notification Management | MTN One Billion MAD Promo</title>
       </Head>
 
       <NotificationContainer>
@@ -47,7 +47,7 @@ const NotificationManagement: React.FC = () => {
         </Grid>
       </NotificationContainer>
     </Layout>
-  )
+  );
 }
 
 export default NotificationManagement

@@ -68,7 +68,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#FFCC00" />
           <meta
             name="description"
-            content="MTN MyNumba Don Win - Top up your MTN line and get a chance to win amazing prizes every day!"
+            content="MTN One Billion MAD Promo - Top up your MTN line and get a chance to win amazing prizes every day!"
           />
         </Head>
         <body>

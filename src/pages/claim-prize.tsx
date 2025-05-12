@@ -7,16 +7,16 @@ const ClaimPrizePage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Claim Prize | MTN MyNumba Don Win</title>
+        <title>Claim Prize | MTN One Billion MAD Promo</title>
         <meta
           name="description"
-          content="Here's how to claim your prize on the MTN MyNumba Don Win promotion."
+          content="Here's how to claim your prize on the MTN One Billion MAD Promo."
         />
       </Head>
 
       <ClaimPrizeScreen />
     </Layout>
-  )
+  );
 }
 
 export default ClaimPrizePage

@@ -7,16 +7,16 @@ const WinnersPage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Winners | MTN MyNumba Don Win</title>
+        <title>Winners | MTN One Billion MAD Promo</title>
         <meta
           name="description"
-          content="Meet the lucky winners of the MTN MyNumba Don Win promotion."
+          content="Meet the lucky winners of the MTN One Billion MAD Promo."
         />
       </Head>
 
       <WinnersScreen />
     </Layout>
-  )
+  );
 }
 
 export default WinnersPage

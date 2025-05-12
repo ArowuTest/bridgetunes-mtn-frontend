@@ -7,16 +7,16 @@ const LivestreamPage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Livestream | MTN MyNumba Don Win</title>
+        <title>Livestream | MTN One Billion MAD Promo</title>
         <meta
           name="description"
-          content="Watch live draws for the MTN MyNumba Don Win promotion and see winners selected in real-time."
+          content="Watch live draws for the MTN One Billion MAD Promo and see winners selected in real-time."
         />
       </Head>
 
       <LivestreamScreen />
     </Layout>
-  )
+  );
 }
 
 export default LivestreamPage

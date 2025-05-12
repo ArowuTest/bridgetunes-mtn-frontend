@@ -6,12 +6,12 @@ const PrizesPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Prizes | MTN MyNumba Don Win</title>
+        <title>Prizes | MTN One Billion MAD Promo</title>
       </Head>
 
       <PrizesScreen />
     </Layout>
-  )
+  );
 }
 
 export default PrizesPage

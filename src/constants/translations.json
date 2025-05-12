@@ -2,7 +2,7 @@
   "landingPage": {
     "heroText": "MTN ONE BILLION MAD PROMO",
     "heroSubText": "Turn your recharges into Millions",
-    "heroDesc": "Every recharge gives you points. Every point is a chance to win big in the MTN MyNumba Don Win promotion.",
+    "heroDesc": "Every recharge gives you points. Every point is a chance to win big in the MTN One Billion MAD Promo",
     "firstButton": "Opt-In Now",
     "secondButton": "Check Your Points",
     "lifeChangingTitle": "Life-Changing Prizes Await You",
@@ -138,6 +138,63 @@
       { "title": "Terms & Conditions", "link": "/terms-and-conditions" },
       { "title": "Privacy Policy", "link": "/privacy-policy" },
       { "title": "FAQ", "link": "/faq" }
+    ]
+  },
+  "faqs": {
+    "title": "Question? Look Here!",
+    "content": [
+      {
+        "title": "What is the “MyNumba Don Win” promo?",
+        "content": "The “MyNumba Don Win” promo is a promotional activity that offers subscribers of MTN the chance to win cash prizes just by performing top-up on their account and with no extra cost."
+      },
+      {
+        "title": "Is there a cost for participating to the promotion?",
+        "content": "No new added cost, you only need to opt-in to the promo event and continue to recharge your mobile phone as you normally do, there is no extra cost for participating in the promotion."
+      },
+      {
+        "title": "How can I participate in “MyNumba Don Win”?",
+        "content": "Subscribers of MTN can register in the promotion in the following ways:\n\n- a. Send the keyword **“OK”** to `XXXXX`\n- b. Dialing *XXXXX#\n- c. Clicking on the opt-in button on the web portal (link)\n- d. Clicking on the subscribe/opt-in button in the promo section within the My MTN App\n- e. Selecting the appropriate option within the MTN On Demand menu\n- f. Clicking the subscribe/Opt-In button within the MoMo menu"
+      },
+      {
+        "title": "Can I cancel my subscription at any time?",
+        "content": "Yes, you can cancel your registration at any time."
+      },
+      {
+        "title": "How can I cancel my subscription?",
+        "content": "You can cancel your subscription by sending an SMS with the words STOP to XXXXX. Upon sending the respective keywords to the short code and successful unsubscription, you will receive a message confirming the cancellation."
+      },
+      {
+        "title": "How do I collect points in the promotion?",
+        "content": "You collect points just by performing top ups throughout the duration of the promotion."
+      },
+      {
+        "title": "How can I check my total points?",
+        "content": "If you just want to be reminded of your current balance, simply send POINTS to XXXXX"
+      },
+      {
+        "title": "How many times can I top up?",
+        "content": "You can top up as many times as you want. The more times you top up, the more points you earn for the draws."
+      },
+      {
+        "title": "When draws are taking place?",
+        "content": "Draws are taking place once per day, Monday – Saturday at 7 p.m."
+      },
+      {
+        "title": "How are winners notified?",
+        "content": "Every winner will be contacted by the Organizer on the mobile phone number he has used to participate in the Offer. The Organizer will attempt to contact the winner at least 3 times a day over a period of 3 days, between the hours of 9am and 8pm. If the winner cannot be contacted during this period, he is disqualified and forfeits the prize."
+      },
+      {
+        "title": "I am a winner, can someone else collect my prize instead of me?",
+        "content": "The prizes are personal and can be redeemed only from the winner or an appointed representative authenticated by a public notary."
+      },
+      {
+        "title": "How can I collect my prizes?",
+        "content": "When you win, you will receive a call from us to provide you with all necessary details for receiving your prize, including proper identification, prize acceptance and consent for appearance in a relevant publicity activity. After that the amount of the prize you’ve won will be transferred to your MoMo account.\n- If you don’t have a MoMo account you will have 2 days to activate one else you will be disqualified and forfeit the prize."
+      },
+      {
+        "title": "Where will the winners be announced?",
+        "content": "Winners will be published on the promo website: www.mynumbadonwin.ng. Furthermore, winners will be contacted by phone, with the purpose of informing them about the prizes they have won."
+      }
     ]
   }
 }

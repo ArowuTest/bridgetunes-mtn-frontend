@@ -7,12 +7,12 @@ const DrawCalendar = () => {
   return (
     <Layout>
       <Head>
-        <title>Draw Calendar | MTN MyNumba Don Win</title>
+        <title>Draw Calendar | MTN One Billion MAD Promo</title>
       </Head>
 
       <DrawCalendarScreen />
     </Layout>
-  )
+  );
 }
 
 export default DrawCalendar
