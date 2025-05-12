@@ -136,8 +136,7 @@
     },
     "bottomLink": [
       { "title": "Terms & Conditions", "link": "/terms-and-conditions" },
-      { "title": "Privacy Policy", "link": "/privacy-policy" },
-      { "title": "FAQ", "link": "/faq" }
+      { "title": "Privacy Policy", "link": "/privacy-policy" }
     ]
   },
   "faqs": {
