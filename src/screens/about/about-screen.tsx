@@ -38,21 +38,21 @@ export const AboutScreen = () => {
             transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
           >
             <h2 className="text-black font-bold text-xl md:text-2xl">
-              About MTN MyNumba Don Win
+              About MTN One Billion MAD Promo
             </h2>
             <p className="text-black text-sm md:text-md mt-4 text-left">
-              MTN MyNumba Don Win is an exciting promotion designed to reward
-              MTN customers for their loyalty. Launched in partnership with
-              Bridgetunes, this promotion gives MTN subscribers the chance to
-              win amazing cash prizes simply by <b>Opting into the promo </b>
+              MTN One Billion MAD Promo is an exciting promotion designed to
+              reward MTN customers for their loyalty. Launched in partnership
+              with Bridgetunes, this promotion gives MTN subscribers the chance
+              to win amazing cash prizes simply by <b>Opting into the promo </b>
               and topping up their MTN lines.
             </p>
 
             <p className="text-black text-sm md:text-md mt-8 text-left">
               The promotion runs daily draws from Monday to Friday, with special
               higher-value draws every Saturday. With a transparent draw process
-              and substantial prize pool, MTN MyNumba Don Win has quickly become
-              one of the most popular promotions in Nigeria.
+              and substantial prize pool, MTN One Billion MAD Promo has quickly
+              become one of the most popular promotions in Nigeria.
             </p>
           </motion.div>
         </motion.div>

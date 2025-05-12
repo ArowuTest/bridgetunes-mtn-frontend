@@ -7,12 +7,12 @@ const Login: React.FC = () => {
   return (
     <AuthLayout>
       <Head>
-        <title>Login | MTN MyNumba Don Win</title>
+        <title>Login | MTN One Billion MAD Promo</title>
       </Head>
 
       <LoginScreen />
     </AuthLayout>
-  )
+  );
 }
 
 export default Login

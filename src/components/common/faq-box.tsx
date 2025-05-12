@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Flex } from "./styles";
 import { GoDash as DashIcon } from "react-icons/go";
 import { FiPlus as PlusIcon } from "react-icons/fi";
+import ReactMarkdown from "react-markdown";
+import React from "react";
 
 type FaqProps = {
   title: string;
@@ -36,7 +38,15 @@ const FaqBoxWrapper = styled.div`
       font-weight: 600;
     }
 
-    .content {
+    .content,
+    .content p,
+    .content li {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #6f6c90;
+    }
+
+    ul li {
       font-size: 0.85rem;
       font-weight: 400;
       color: #6f6c90;
@@ -70,7 +80,15 @@ export const FaqBox = ({
         className="content__wrapper"
       >
         <p className="title">{content.title}</p>
-        {isOpen && <p className="content">{content.content}</p>}
+        {isOpen && (
+          <ReactMarkdown
+            components={{
+              p: ({ children }) => <div className="content">{children}</div>,
+            }}
+          >
+            {content.content}
+          </ReactMarkdown>
+        )}
       </Flex>
       <div
         className="toggle"

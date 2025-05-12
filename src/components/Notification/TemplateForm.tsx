@@ -125,7 +125,7 @@ const TemplateForm: React.FC = () => {
             id="name"
             type="text"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             placeholder="e.g., Daily Winner Notification"
             disabled={isSubmitting}
           />
@@ -136,7 +136,7 @@ const TemplateForm: React.FC = () => {
           <Select
             id="type"
             value={type}
-            onChange={e => setType(e.target.value)}
+            onChange={(e) => setType(e.target.value)}
             disabled={isSubmitting}
           >
             <option value="general">General</option>
@@ -162,8 +162,8 @@ const TemplateForm: React.FC = () => {
           <Textarea
             id="content"
             value={content}
-            onChange={e => setContent(e.target.value)}
-            placeholder="e.g., Congratulations {name}! You've won {amount} in the MTN MyNumba Don Win draw on {date}."
+            onChange={(e) => setContent(e.target.value)}
+            placeholder="e.g., Congratulations {name}! You've won {amount} in the MTN One Billion MAD Promo draw on {date}."
             disabled={isSubmitting}
           />
         </FormGroup>
@@ -197,7 +197,7 @@ const TemplateForm: React.FC = () => {
         </ButtonGroup>
       </Form>
     </TemplateFormContainer>
-  )
+  );
 }
 
 export default TemplateForm

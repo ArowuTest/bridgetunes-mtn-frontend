@@ -150,7 +150,7 @@ const OptInForm: React.FC = () => {
 
   return (
     <OptInContainer>
-      <CardTitle>Opt-In to MTN MyNumba Don Win</CardTitle>
+      <CardTitle>Opt-In to MTN One Billion MAD Promo</CardTitle>
 
       {!success && !failure ? (
         <>
@@ -229,8 +229,8 @@ const OptInForm: React.FC = () => {
           </CheckIcon>
           <SuccessMessage>Successfully Opted-In!</SuccessMessage>
           <p style={{ textAlign: "center", marginBottom: "1.5rem" }}>
-            Your phone number has been registered for the MTN MyNumba Don Win
-            promotion. You are now eligible for daily and weekly draws!
+            Your phone number has been registered for the MTN One Billion MAD
+            Promo promotion. You are now eligible for daily and weekly draws!
             {email && (
               <>
                 <br />
@@ -263,7 +263,7 @@ const OptInForm: React.FC = () => {
         </SuccessAnimation>
       )}
     </OptInContainer>
-  )
+  );
 }
 
 export default OptInForm

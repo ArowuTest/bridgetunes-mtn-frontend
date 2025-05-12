@@ -58,15 +58,15 @@ export const sendEmail = async (options: EmailOptions) => {
  * @returns Promise resolving to the API response
  */
 export const sendSignupConfirmationEmail = async (email: string, name?: string) => {
-  const subject = 'Welcome to MTN MyNumba Don Win!';
+  const subject = "Welcome to MTN One Billion MAD Promo!";
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background-color: #FFCC00; padding: 20px; text-align: center;">
-        <h1 style="color: #333; margin: 0;">MTN MyNumba Don Win</h1>
+        <h1 style="color: #333; margin: 0;">MTN One Billion MAD Promo</h1>
       </div>
       <div style="padding: 20px; border: 1px solid #ddd; border-top: none;">
-        <h2>Welcome${name ? ` ${name}` : ''}!</h2>
-        <p>Thank you for opting in to the MTN MyNumba Don Win promotion. You are now eligible for our daily and weekly draws!</p>
+        <h2>Welcome${name ? ` ${name}` : ""}!</h2>
+        <p>Thank you for opting in to the MTN One Billion MAD Promo. You are now eligible for our daily and weekly draws!</p>
         <p>Here's what you need to know:</p>
         <ul>
           <li>Top up your MTN line regularly to earn more points</li>
@@ -81,7 +81,7 @@ export const sendSignupConfirmationEmail = async (email: string, name?: string) 
           <p style="margin: 5px 0;">Saturday Special Jackpot: ₦10,000,000</p>
         </div>
         <p>Good luck!</p>
-        <p>The MTN MyNumba Don Win Team</p>
+        <p>The MTN One Billion MAD Promo Team</p>
       </div>
       <div style="background-color: #333; color: white; padding: 15px; text-align: center; font-size: 12px;">
         <p>© 2025 MTN Nigeria. All rights reserved.</p>
@@ -105,17 +105,17 @@ export const sendSignupConfirmationEmail = async (email: string, name?: string) 
  * @returns Promise resolving to the API response
  */
 export const sendWinnerNotificationEmail = async (email: string, prize: string, drawType: string) => {
-  const subject = 'Congratulations! You Won in MTN MyNumba Don Win!';
+  const subject = "Congratulations! You Won in MTN One Billion MAD Promo!";
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <div style="background-color: #FFCC00; padding: 20px; text-align: center;">
-        <h1 style="color: #333; margin: 0;">MTN MyNumba Don Win</h1>
+        <h1 style="color: #333; margin: 0;">MTN One Billion MAD Promo</h1>
       </div>
       <div style="padding: 20px; border: 1px solid #ddd; border-top: none;">
         <h2>Congratulations!</h2>
         <p>We are thrilled to inform you that you have won ${prize} in our ${drawType} draw!</p>
         <p>Your prize will be credited to your MTN account or transferred via mobile money within 48 hours.</p>
-        <p>Thank you for participating in the MTN MyNumba Don Win promotion.</p>
+        <p>Thank you for participating in the MTN One Billion MAD Promo.</p>
         <div style="background-color: #f5f5f5; padding: 15px; margin: 20px 0; border-left: 4px solid #FFCC00;">
           <p style="margin: 0;"><strong>Prize Details:</strong></p>
           <p style="margin: 5px 0;">Amount: ${prize}</p>
@@ -123,7 +123,7 @@ export const sendWinnerNotificationEmail = async (email: string, prize: string, 
           <p style="margin: 5px 0;">Date: ${new Date().toLocaleDateString()}</p>
         </div>
         <p>Keep topping up your MTN line to increase your chances of winning again!</p>
-        <p>The MTN MyNumba Don Win Team</p>
+        <p>The MTN One Billion MAD Promo Team</p>
       </div>
       <div style="background-color: #333; color: white; padding: 15px; text-align: center; font-size: 12px;">
         <p>© 2025 MTN Nigeria. All rights reserved.</p>

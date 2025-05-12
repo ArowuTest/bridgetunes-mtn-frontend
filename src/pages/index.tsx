@@ -7,16 +7,16 @@ const HomePage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>MTN MyNumba Don Win | Bridgetunes</title>
+        <title>MTN One Billion MAD Promo | Bridgetunes</title>
         <meta
           name="description"
-          content="Participate in MTN MyNumba Don Win promotion and get a chance to win amazing prizes!"
+          content="Participate in MTN One Billion MAD Promo and get a chance to win amazing prizes!"
         />
       </Head>
 
       <LandingPage />
     </Layout>
-  )
+  );
 }
 
 export default HomePage

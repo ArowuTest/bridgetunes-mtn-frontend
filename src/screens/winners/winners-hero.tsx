@@ -35,7 +35,7 @@ export const WinnersHero = () => {
           <h2 className="text-black font-bold text-2xl md:text-4xl">Winners</h2>
 
           <p className="text-black/80 text-sm md:text-md mt-6 text-left">
-            Congratulations to all the winners of the MTN MyNumba Don Win
+            Congratulations to all the winners of the MTN One Billion MAD Promo
             promotion! Every day, we select lucky MTN subscribers to receive
             amazing cash prizes. Check out our recent winners and their stories
             below.
