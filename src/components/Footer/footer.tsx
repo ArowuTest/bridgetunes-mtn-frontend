@@ -4,16 +4,12 @@ import { FooterWrapper, StyledInput } from "./footer.styles";
 import translations from "@/src/constants/translations.json";
 import Link from "next/link";
 import { useState } from "react";
-import { MdOutlineArrowDropDownCircle as CircleIcon } from "react-icons/md";
 import { MdKeyboardArrowDown as ArrowDown } from "react-icons/md";
 
 export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
-  const [openPanel, setOpenPanel] = useState<string | null>(null);
-
-  const togglePanel = (panel: string) => {
-    setOpenPanel((prev) => (prev === panel ? null : panel));
-  };
+  const [quickLinksOpen, setQuickLinksOpen] = useState(true);
+  const [contactUsOpen, setContactUsOpen] = useState(true);
 
   return (
     <FooterWrapper direction="row" align="center" justify="center">
@@ -46,11 +42,11 @@ export const Footer = () => {
               <div className="footer__item__wrap">
                 <div
                   className="top__section"
-                  onClick={() => togglePanel("quickLinks")}
+                  onClick={() => setQuickLinksOpen((prev) => !prev)}
                 >
                   <p
                     style={{
-                      color: openPanel === "quickLinks" ? "#ffcc08" : "",
+                      color: quickLinksOpen ? "#ffcc08" : "",
                     }}
                   >
                     Quick Links
@@ -62,15 +58,14 @@ export const Footer = () => {
                     <ArrowDown
                       size={8}
                       style={{
-                        transform:
-                          openPanel === "quickLinks"
-                            ? "rotate(180deg)"
-                            : "rotate(0deg)",
+                        transform: quickLinksOpen
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
                       }}
                     />
                   </button>
                 </div>
-                {openPanel === "quickLinks" && (
+                {quickLinksOpen && (
                   <div className="content__section">
                     {translations.footer.quickLinks.links.map((item, index) => (
                       <Link href={item.link} key={index}>
@@ -83,11 +78,11 @@ export const Footer = () => {
               <div className="footer__item__wrap">
                 <div
                   className="top__section"
-                  onClick={() => togglePanel("contactUs")}
+                  onClick={() => setContactUsOpen((prev) => !prev)}
                 >
                   <p
                     style={{
-                      color: openPanel === "contactUs" ? "#ffcc08" : "",
+                      color: contactUsOpen ? "#ffcc08" : "",
                     }}
                   >
                     Contact Us
@@ -99,15 +94,14 @@ export const Footer = () => {
                     <ArrowDown
                       size={8}
                       style={{
-                        transform:
-                          openPanel === "contactUs"
-                            ? "rotate(180deg)"
-                            : "rotate(0deg)",
+                        transform: contactUsOpen
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
                       }}
                     />
                   </button>
                 </div>
-                {openPanel === "contactUs" && (
+                {contactUsOpen && (
                   <div className="content__section">
                     {translations.footer.contactUs.links.map((item, index) => (
                       <Link href={item.link} key={index}>

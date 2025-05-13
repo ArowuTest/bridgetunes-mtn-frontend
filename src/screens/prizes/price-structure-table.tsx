@@ -69,12 +69,12 @@ export function PriceStructureTable() {
   ];
 
   // Calculate weekday totals
-  const dailyPrizes = "₦6,750,000";
+  const dailyPrizes = "";
   const noOfPrizes = "63 Winners";
   const totalDailyPrizeValue = "₦11,000,000";
 
   //Calculate weekend totals
-  const saturdaySpecial = "₦13,250,000";
+  const saturdaySpecial = "";
   const noOfPrizesSaturday = "104 Winners";
   const totalDailyPrizeSaturday = "₦23,450,000";
 
