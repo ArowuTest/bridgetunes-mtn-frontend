@@ -4,9 +4,17 @@ import { FooterWrapper, StyledInput } from "./footer.styles";
 import translations from "@/src/constants/translations.json";
 import Link from "next/link";
 import { useState } from "react";
+import { MdOutlineArrowDropDownCircle as CircleIcon } from "react-icons/md";
+import { MdKeyboardArrowDown as ArrowDown } from "react-icons/md";
 
 export const Footer = () => {
   const [year] = useState(new Date().getFullYear());
+  const [openPanel, setOpenPanel] = useState<string | null>(null);
+
+  const togglePanel = (panel: string) => {
+    setOpenPanel((prev) => (prev === panel ? null : panel));
+  };
+
   return (
     <FooterWrapper direction="row" align="center" justify="center">
       <Container>
@@ -27,17 +35,95 @@ export const Footer = () => {
               justify="flex-start"
               align="flex-start"
               gap="12px"
-              className="column__one__footer"
+              className="column__one__footer bridgetune__section"
             >
               <LogoSVG />
-              <p>{translations.footer.columnOne}</p>
+              <p className="bridgetune__text">
+                {translations.footer.columnOne}
+              </p>
+            </Flex>
+            <Flex className="mobile__menu">
+              <div className="footer__item__wrap">
+                <div
+                  className="top__section"
+                  onClick={() => togglePanel("quickLinks")}
+                >
+                  <p
+                    style={{
+                      color: openPanel === "quickLinks" ? "#ffcc08" : "",
+                    }}
+                  >
+                    Quick Links
+                  </p>
+                  <button
+                    className="arrown__btn"
+                    style={{ background: "#ffcc08" }}
+                  >
+                    <ArrowDown
+                      size={8}
+                      style={{
+                        transform:
+                          openPanel === "quickLinks"
+                            ? "rotate(180deg)"
+                            : "rotate(0deg)",
+                      }}
+                    />
+                  </button>
+                </div>
+                {openPanel === "quickLinks" && (
+                  <div className="content__section">
+                    {translations.footer.quickLinks.links.map((item, index) => (
+                      <Link href={item.link} key={index}>
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className="footer__item__wrap">
+                <div
+                  className="top__section"
+                  onClick={() => togglePanel("contactUs")}
+                >
+                  <p
+                    style={{
+                      color: openPanel === "contactUs" ? "#ffcc08" : "",
+                    }}
+                  >
+                    Contact Us
+                  </p>
+                  <button
+                    className="arrown__btn"
+                    style={{ background: "#ffcc08" }}
+                  >
+                    <ArrowDown
+                      size={8}
+                      style={{
+                        transform:
+                          openPanel === "contactUs"
+                            ? "rotate(180deg)"
+                            : "rotate(0deg)",
+                      }}
+                    />
+                  </button>
+                </div>
+                {openPanel === "contactUs" && (
+                  <div className="content__section">
+                    {translations.footer.contactUs.links.map((item, index) => (
+                      <Link href={item.link} key={index}>
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </Flex>
             <Flex
               direction="column"
               justify="flex-start"
               align="flex-start"
               gap="12px"
-              className="column__item__width"
+              className="column__item__width quick__links"
             >
               <p className="footer__content__title">
                 {translations.footer.quickLinks.title}
@@ -55,7 +141,7 @@ export const Footer = () => {
               justify="flex-start"
               align="flex-start"
               gap="12px"
-              className="column__item__width"
+              className="column__item__width contact__us"
             >
               <p className="footer__content__title">
                 {translations.footer.contactUs.title}

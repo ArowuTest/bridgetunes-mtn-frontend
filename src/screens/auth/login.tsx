@@ -1,4 +1,4 @@
-import { ProductLogo } from "@/src/components/common/product-logo"
+import { ProductLogo } from "@/src/components/common/product-logo";
 import {
   Alert,
   Button,
@@ -6,16 +6,16 @@ import {
   FormGroup,
   Input,
   Label,
-} from "@/src/components/common/styles"
+} from "@/src/components/common/styles";
 import {
   useLoginService,
   useRequestLoginToken,
-} from "@/src/network/service-hooks/auth"
-import { formatPhone } from "@/src/utils/format-phone"
-import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
-import { FaArrowRight, FaPhone } from "react-icons/fa"
-import styled from "styled-components"
+} from "@/src/network/service-hooks/auth";
+import { formatPhone } from "@/src/utils/format-phone";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { FaArrowRight, FaPhone } from "react-icons/fa";
+import styled from "styled-components";
 
 const LoginContainer = styled.div`
   max-width: 500px;
@@ -24,7 +24,22 @@ const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+  gap: 10px;
+
+  .danger__class {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    max-width: 100%;
+    padding: 0 0.75rem;
+    margin: 1.5rem auto;
+
+    .danger__class {
+      font-size: 0.9rem;
+    }
+  }
+`;
 
 const CardTitle = styled.h2`
   font-size: 1.75rem;
@@ -34,19 +49,24 @@ const CardTitle = styled.h2`
   color: ${({ theme }) => theme.colors.white};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    margin-top: 1rem;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 1.4rem;
   }
-`
+`;
 
 const CardSubTitle = styled.span`
   font-size: 0.85rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.gray};
-`
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 0.75rem;
+  }
+`;
 
 const TACText = styled.p`
   font-size: 0.6rem;
@@ -57,7 +77,7 @@ const TACText = styled.p`
   b {
     color: ${({ theme }) => theme.colors.primary};
   }
-`
+`;
 
 const ResendOtpText = styled.p`
   font-size: 0.6rem;
@@ -66,7 +86,7 @@ const ResendOtpText = styled.p`
   margin-bottom: 0.5rem;
   text-align: left;
   font-weight: bold;
-`
+`;
 
 const InputGroup = styled.div`
   margin-bottom: 1.5rem;
@@ -80,11 +100,11 @@ const InputGroup = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     height: 3rem;
   }
-`
+`;
 
 const InputIcon = styled.div`
   color: ${({ theme }) => theme.colors.gray};
-`
+`;
 
 const StyledInput = styled(Input)`
   padding-left: 1rem;
@@ -102,20 +122,20 @@ const StyledInput = styled(Input)`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: 0.85rem;
   }
-`
+`;
 
 const VerifyButton = styled(Button)`
   border-radius: 0 0.3rem 0.3rem 0;
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
   height: 100%;
-`
+`;
 
 const OtpContainer = styled.div`
   display: flex;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
-`
+`;
 
 const OtpInput = styled(Input)`
   width: 3rem;
@@ -126,96 +146,96 @@ const OtpInput = styled(Input)`
   color: ${({ theme }) => theme.colors.textLight};
   background-color: ${({ theme }) => theme.colors.black};
   border: 0;
-`
+`;
 
 export const LoginScreen = () => {
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [formattedPhone, setFormattedPhone] = useState("")
-  const [phoneVerificationSent, setPhoneVerificationSent] = useState(false)
-  const [countdown, setCountdown] = useState(0)
-  const [otp, setOtp] = useState(["", "", "", ""])
-  const [error, setError] = useState<string | null>(null)
-  const { mutate, isLoading } = useRequestLoginToken()
-  const { mutate: loginMutation, isLoading: loginLoading } = useLoginService()
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [formattedPhone, setFormattedPhone] = useState("");
+  const [phoneVerificationSent, setPhoneVerificationSent] = useState(false);
+  const [countdown, setCountdown] = useState(0);
+  const [otp, setOtp] = useState(["", "", "", ""]);
+  const [error, setError] = useState<string | null>(null);
+  const { mutate, isLoading } = useRequestLoginToken();
+  const { mutate: loginMutation, isLoading: loginLoading } = useLoginService();
 
   // Reset countdown when verification is sent
   useEffect(() => {
     if (phoneVerificationSent && countdown === 0) {
-      setCountdown(60) // 60 seconds countdown
+      setCountdown(60); // 60 seconds countdown
     }
-  }, [phoneVerificationSent])
+  }, [phoneVerificationSent]);
 
   // Countdown timer
   useEffect(() => {
-    let timer: NodeJS.Timeout | undefined
+    let timer: NodeJS.Timeout | undefined;
 
     if (countdown > 0) {
-      timer = setTimeout(() => setCountdown(countdown - 1), 1000)
+      timer = setTimeout(() => setCountdown(countdown - 1), 1000);
     } else if (countdown === 0 && phoneVerificationSent) {
       // When countdown reaches 0, we don't auto-reset phoneVerificationSent
       // This allows user to enter OTP, but also allows resending
     }
 
-    return () => clearTimeout(timer)
-  }, [countdown, phoneVerificationSent])
+    return () => clearTimeout(timer);
+  }, [countdown, phoneVerificationSent]);
 
   const handleOtpChange = (index: number, value: string) => {
     if (value.length <= 1) {
-      const newOtp = [...otp]
-      newOtp[index] = value
-      setOtp(newOtp)
+      const newOtp = [...otp];
+      newOtp[index] = value;
+      setOtp(newOtp);
 
       // Auto-focus next input
       if (value && index < 3) {
-        const nextInput = document.getElementById(`otp-${index + 1}`)
+        const nextInput = document.getElementById(`otp-${index + 1}`);
         if (nextInput) {
-          nextInput.focus()
+          nextInput.focus();
         }
       }
     }
-  }
+  };
 
   const handleSendVerification = async () => {
     if (!phoneNumber || phoneNumber.length < 13) {
-      setError("Please enter a valid phone number")
-      return
+      setError("Please enter a valid phone number");
+      return;
     }
 
-    setError(null)
+    setError(null);
 
     mutate(
       { phoneNumber },
       {
         onSuccess: () => {
-          setPhoneVerificationSent(true)
+          setPhoneVerificationSent(true);
         },
       }
-    )
-  }
+    );
+  };
 
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    setError(null)
+    setError(null);
 
     if (!phoneNumber || phoneNumber.length < 13) {
-      setError("Please enter a valid phone number")
-      return
+      setError("Please enter a valid phone number");
+      return;
     }
 
     if (!phoneVerificationSent) {
-      setError("Please verify your phone number")
-      return
+      setError("Please verify your phone number");
+      return;
     }
 
-    const otpValue = otp.join("")
+    const otpValue = otp.join("");
     if (otpValue.length !== 4) {
-      setError("Please enter the 4-digit verification code")
-      return
+      setError("Please enter the 4-digit verification code");
+      return;
     }
 
-    loginMutation({ phoneNumber, token: otpValue })
-  }
+    loginMutation({ phoneNumber, token: otpValue });
+  };
 
   return (
     <LoginContainer>
@@ -225,7 +245,11 @@ export const LoginScreen = () => {
       <CardSubTitle>Please login with your MTN Phone number</CardSubTitle>
 
       {error && (
-        <Alert variant="danger" style={{ marginBottom: "1.5rem" }}>
+        <Alert
+          className="danger__class"
+          variant="danger"
+          style={{ marginBottom: "1.5rem" }}
+        >
           {error}
         </Alert>
       )}
@@ -244,11 +268,11 @@ export const LoginScreen = () => {
               maxLength={18}
               placeholder="+234-XXX XXXX XXX"
               value={formattedPhone}
-              onChange={e => {
-                const raw = e.target.value.replace(/\D/g, "")
-                const formatted = formatPhone(raw)
-                setPhoneNumber(e.target.value)
-                setFormattedPhone(formatted)
+              onChange={(e) => {
+                const raw = e.target.value.replace(/\D/g, "");
+                const formatted = formatPhone(raw);
+                setPhoneNumber(e.target.value);
+                setFormattedPhone(formatted);
               }}
               disabled={phoneVerificationSent}
             />
@@ -278,7 +302,7 @@ export const LoginScreen = () => {
                     type="text"
                     maxLength={1}
                     value={digit}
-                    onChange={e => handleOtpChange(index, e.target.value)}
+                    onChange={(e) => handleOtpChange(index, e.target.value)}
                   />
                 ))}
               </OtpContainer>
@@ -311,5 +335,5 @@ export const LoginScreen = () => {
         )}
       </Form>
     </LoginContainer>
-  )
-}
+  );
+};

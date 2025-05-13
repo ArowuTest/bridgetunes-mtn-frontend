@@ -29,9 +29,13 @@ const ResponsiveImage = styled.img`
   object-fit: contain;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 50%;
+    max-width: 50%;
   }
-`
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    max-width: 50%;
+  }
+`;
 
 export const ProductLogo = () => {
   const { push } = useRouter()

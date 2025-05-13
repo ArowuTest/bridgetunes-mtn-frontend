@@ -35,6 +35,11 @@ const LoginBanner = styled.img`
   top: 0px;
   bottom: 0px;
   z-index: 1;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
 `;
 
 const Card = styled.div`
@@ -43,6 +48,7 @@ const Card = styled.div`
   text-align: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 1.5rem 1.5rem;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
