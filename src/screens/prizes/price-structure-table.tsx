@@ -147,35 +147,67 @@ export function PriceStructureTable() {
         </table>
       </div>
 
-      {/* Mobile view - Cards */}
-      <div className="md:hidden space-y-4">
-        <div className="bg-yellow-400 rounded-t-lg p-4 font-semibold">
-          <div className="grid grid-cols-3 gap-2">
-            <div>Prize</div>
-            <div>Weekday</div>
-            <div>Saturday</div>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-b-lg divide-y divide-gray-200">
-          {prizeData.map((row, index) => (
-            <div key={index} className="p-4">
-              <div className="grid grid-cols-3 gap-2 text-sm">
-                <div>{row.prize}</div>
-                <div>{row.dailyPrizes}</div>
-                <div>{row.noOfPrizes}</div>
-              </div>
-            </div>
-          ))}
-
-          <div className="bg-blue-600 text-white p-4 rounded-b-lg">
-            <div className="grid grid-cols-3 gap-2 font-bold text-sm">
-              <div>TOTAL</div>
-              <div>{dailyPrizes}</div>
-              <div>{noOfPrizes}</div>
-            </div>
-          </div>
-        </div>
+      {/* Mobile view - horizontally scrollable table */}
+      <div className="md:hidden overflow-x-auto">
+        <table className="min-w-[800px] w-full border border-gray-700 rounded-lg shadow">
+          <thead className="bg-yellow-500">
+            <tr>
+              <th className="px-4 py-3 text-left text-base font-bold">
+                Prize Pool Breakdown
+              </th>
+              <th className="px-4 py-3 text-left text-base font-bold">
+                Daily Prizes [Mon - Fri]
+              </th>
+              <th className="px-4 py-3 text-left text-base font-bold">
+                No. of Prizes [Mon-Fri]
+              </th>
+              <th className="px-4 py-3 text-left text-base font-bold">
+                Total Daily Prize Value
+              </th>
+              <th className="bg-[#2C73DB] text-white px-4 py-3 text-left text-base font-bold">
+                Saturday Special
+              </th>
+              <th className="bg-[#2C73DB] text-white px-4 py-3 text-left text-base font-bold">
+                No. of Prizes [Sat]
+              </th>
+              <th className="bg-[#2C73DB] text-white px-4 py-3 text-left text-base font-bold">
+                Total Daily Prize Value [Saturday]
+              </th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200">
+            {prizeData.map((row, index) => (
+              <tr key={index} className="bg-white text-left text-gray-600">
+                <td className="px-4 py-3 text-sm">{row.prize}</td>
+                <td className="px-4 py-3 text-sm">{row.dailyPrizes}</td>
+                <td className="px-4 py-3 text-sm">{row.noOfPrizes}</td>
+                <td className="px-4 py-3 text-sm">
+                  {row.totalDailyPrizeValue}
+                </td>
+                <td className="px-4 py-3 text-sm">{row.saturdaySpecial}</td>
+                <td className="px-4 py-3 text-sm">{row.noOfPrizesSat}</td>
+                <td className="px-4 py-3 text-sm">
+                  {row.totalDailyPrizeValueSat}
+                </td>
+              </tr>
+            ))}
+            <tr className="bg-black text-white text-left">
+              <td className="px-4 py-3 font-bold text-sm">TOTAL</td>
+              <td className="px-4 py-3 font-bold text-sm">{dailyPrizes}</td>
+              <td className="px-4 py-3 font-bold text-sm">{noOfPrizes}</td>
+              <td className="px-4 py-3 font-bold text-sm">
+                {totalDailyPrizeValue}
+              </td>
+              <td className="px-4 py-3 font-bold text-sm">{saturdaySpecial}</td>
+              <td className="px-4 py-3 font-bold text-sm">
+                {noOfPrizesSaturday}
+              </td>
+              <td className="px-4 py-3 font-bold text-sm">
+                {totalDailyPrizeSaturday}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </motion.div>
   );

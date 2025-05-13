@@ -1,5 +1,5 @@
-import { motion } from "framer-motion"
-import { PriceStructureTable } from "./price-structure-table"
+import { motion } from "framer-motion";
+import { PriceStructureTable } from "./price-structure-table";
 
 export const PriceStructure = () => {
   return (
@@ -14,9 +14,9 @@ export const PriceStructure = () => {
         Price Structure
       </motion.h2>
 
-      <div className="max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-[80%] mx-auto py-8 px-6">
+      <div className="max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-[80%] mx-auto py-8 px-0 md:px-6">
         <PriceStructureTable />
       </div>
     </section>
-  )
-}
+  );
+};

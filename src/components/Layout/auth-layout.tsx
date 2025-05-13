@@ -27,6 +27,16 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    min-height: 100dvh;
+    max-width: 52rem;
+
+    .card__wrapper {
+      height: fit-content;
+      margin-top: 40px;
+    }
+  }
 `;
 
 const LoginBanner = styled.img`
@@ -39,6 +49,7 @@ const LoginBanner = styled.img`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    top: -110px;
   }
 `;
 
@@ -48,7 +59,7 @@ const Card = styled.div`
   text-align: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 1.5rem 1.5rem;
+    padding: 1rem 0.5rem;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {

@@ -32,7 +32,7 @@ const LoginContainer = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     max-width: 100%;
-    padding: 0 0.75rem;
+    padding: 0rem;
     margin: 1.5rem auto;
 
     .danger__class {
@@ -326,7 +326,12 @@ export const LoginScreen = () => {
               type="submit"
               variant="primary"
               disabled={isLoading}
-              style={{ width: "100%" }}
+              style={{
+                width: "100%",
+                display: "inline-flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
               {isLoading ? "Processing..." : "Log In / Sign Up"}
               {!isLoading && <FaArrowRight style={{ marginLeft: "0.5rem" }} />}
