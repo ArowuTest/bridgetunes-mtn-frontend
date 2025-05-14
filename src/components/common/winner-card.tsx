@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 
-type WinnerCardProps = {
+export type WinnerCardProps = {
   name: string;
   amount: string;
   date: string;

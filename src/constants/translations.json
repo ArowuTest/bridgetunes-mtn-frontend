@@ -48,6 +48,11 @@
     "nextDrawTitle": "Next Draw Happening Soon!",
     "rechargeNowButton": "Opt-In Now",
     "winnersPoolText": "These Lucky Winners Are Celebrating Right Now!",
+    "noWinnerTexts": {
+      "mainText": "No Winners Yet",
+      "buttonText": "Be the first to make history!",
+      "subText": "Check back after the next draw to see if your name appears here."
+    },
     "winnersCards": [
       {
         "name": "Chinonso D.",

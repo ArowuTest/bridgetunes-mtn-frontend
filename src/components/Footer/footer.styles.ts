@@ -26,6 +26,8 @@ export const FooterWrapper = styled(Flex)`
     font-size: 1.2rem;
     font-weight: 700;
     line-height: normal;
+    text-align: left;
+    width: 100%;
   }
 
   .column__item__width {
@@ -62,6 +64,16 @@ export const FooterWrapper = styled(Flex)`
         .stay__updated__text {
           margin-bottom: 14px;
           text-transform: capitalize;
+        }
+
+        .stay__updated__btn__wrap {
+          width: 100%;
+          display: flex;
+          margin-top: 5px;
+
+          .stay__updated__btn {
+            width: fit-content;
+          }
         }
       }
     }
@@ -174,10 +186,13 @@ export const FooterWrapper = styled(Flex)`
               justify-content: flex-start;
               align-items: flex-start;
               gap: 5px;
+              width: 100%;
 
               a {
                 line-height: normal;
                 font-size: 0.65rem;
+                text-align: left;
+                width: 100%;
               }
             }
           }

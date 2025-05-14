@@ -32,7 +32,7 @@ const ConfettiBox = ({
         position: "absolute",
         inset: 0,
         pointerEvents: "none",
-        overflow: "hidden"
+        overflow: "hidden",
       }}
     >
       {size.width > 0 && (
@@ -42,6 +42,7 @@ const ConfettiBox = ({
           numberOfPieces={run ? numberOfPieces : 0}
           recycle={recycle}
           {...props}
+          ref={ref}
         />
       )}
     </div>

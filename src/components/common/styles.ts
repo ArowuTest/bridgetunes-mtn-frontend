@@ -28,6 +28,7 @@ export const Flex = styled.div<{
   backgroundPattern?: string;
   backgroundColor?: string;
   padding?: string;
+  width?: string;
 }>`
   display: flex;
   position: relative; // Add this
@@ -38,6 +39,7 @@ export const Flex = styled.div<{
   background-image: ${({ backgroundImage }) => backgroundImage || ""};
   background: ${({ background }) => background || ""};
   padding: ${({ padding }) => padding || ""};
+  width: ${({ width }) => width || ""};
 
   & > * {
     position: relative;

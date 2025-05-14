@@ -63,6 +63,7 @@ export const WinnersSectionWrapper = styled.section`
             justify-content: flex-start;
           }
         }
+
       }
     }
   }

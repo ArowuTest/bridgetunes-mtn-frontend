@@ -162,19 +162,27 @@ export const Footer = () => {
               <p className="footer__content__title">
                 {translations.footer.stayUpdated.title}
               </p>
-              <Flex direction="column" justify="flex-start" align="flex-start">
+              <Flex
+                width="100%"
+                direction="column"
+                justify="flex-start"
+                align="flex-start"
+              >
                 <p className="stay__updated__text">
                   {translations.footer.stayUpdated.text}
                 </p>
                 <StyledInput placeholder="Email" type="email" />
-                <Button
-                  fontSize="0.75rem"
-                  padding="0.4rem 1.2rem"
-                  borderRadius="4px"
-                  margin="0.3rem 0"
-                >
-                  {translations.footer.stayUpdated.button}
-                </Button>
+                <div className="stay__updated__btn__wrap">
+                  <Button
+                    fontSize="0.75rem"
+                    padding="0.4rem 1.2rem"
+                    borderRadius="4px"
+                    margin="0.3rem 0"
+                    className="stay__updated__btn"
+                  >
+                    {translations.footer.stayUpdated.button}
+                  </Button>
+                </div>
               </Flex>
             </Flex>
           </Flex>
