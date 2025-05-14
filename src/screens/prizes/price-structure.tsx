@@ -3,7 +3,10 @@ import { PriceStructureTable } from "./price-structure-table";
 
 export const PriceStructure = () => {
   return (
-    <section className="py-16 px-6 bg-[#090F21] text-center">
+    <section
+      className="py-16 px-6 bg-[#090F21] text-center"
+      id="price-structure"
+    >
       <motion.h2
         className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 text-gray-200"
         initial={{ opacity: 0, scale: 0.8 }}

@@ -176,12 +176,20 @@
         "content": "If you just want to be reminded of your current balance, simply send POINTS to XXXXX"
       },
       {
+        "title": "How many points can I earn?",
+        "content": "Depending on the amount of each top up, you can get the following points, The points also represent how many times your number is entered into a draw, for example N100 recharge your number is entered 1x into the draw and N1,000 recharge your number is entered 10x into the draw.  \n\n [Click here to see the break down](/prizes#how-we-select-winners)"
+      },
+      {
         "title": "How many times can I top up?",
         "content": "You can top up as many times as you want. The more times you top up, the more points you earn for the draws."
       },
       {
         "title": "When draws are taking place?",
         "content": "Draws are taking place once per day, Monday – Saturday at 7 p.m."
+      },
+      {
+        "title": "What sort of prizes can I win by participating in the promo?",
+        "content": "All the points you collect are added in the draws for the following prizes: \n\n [Click here to see the prizes](/prizes#price-structure)"
       },
       {
         "title": "How are winners notified?",
