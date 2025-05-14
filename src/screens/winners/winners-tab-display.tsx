@@ -1,25 +1,27 @@
 import React from "react"
 import { allTimeWinners, jackpotWinners, recentWinners } from "./data"
 import { motion } from "framer-motion"
+import { NoWinnerBox } from "@/src/components/common/no-winner-box";
+import ConfettiBox from "@/src/components/common/confetti-box";
 
 export const WinnersTabDisplay = () => {
-  const [activeTab, setActiveTab] = React.useState("recent")
+  const [activeTab, setActiveTab] = React.useState("recent");
 
   const renderWinners = () => {
-    let winnersToShow = []
+    let winnersToShow = [];
 
     switch (activeTab) {
       case "recent":
-        winnersToShow = recentWinners
-        break
+        winnersToShow = recentWinners;
+        break;
       case "jackpot":
-        winnersToShow = jackpotWinners
-        break
+        winnersToShow = jackpotWinners;
+        break;
       case "allTime":
-        winnersToShow = allTimeWinners
-        break
+        winnersToShow = allTimeWinners;
+        break;
       default:
-        winnersToShow = recentWinners
+        winnersToShow = recentWinners;
     }
 
     return (
@@ -59,11 +61,23 @@ export const WinnersTabDisplay = () => {
           </motion.div>
         ))}
       </div>
-    )
-  }
+    );
+  };
 
   return (
-    <section className="py-16 px-4 bg-[#090F21] text-center">
+    <section className="py-16 px-4 bg-[#090F21] text-center relative">
+      <ConfettiBox
+        gravity={0.1}
+        height={1000}
+        initialVelocityX={2}
+        initialVelocityY={2}
+        numberOfPieces={700}
+        opacity={1}
+        recycle={false}
+        run
+        width={1600}
+        wind={0}
+      />
       <div className="flex flex-col items-center">
         <motion.div
           className="flex justify-center space-x-2 sm:space-x-4 mb-4 sm:mb-6"
@@ -72,7 +86,7 @@ export const WinnersTabDisplay = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {["recent", "jackpot", "allTime"].map(tab => (
+          {["recent", "jackpot", "allTime"].map((tab) => (
             <span
               key={tab}
               className={`px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-light transition-all duration-300 cursor-pointer text-xs md:text-sm ${
@@ -92,9 +106,10 @@ export const WinnersTabDisplay = () => {
         </motion.div>
 
         <div className="max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-[80%] mx-auto py-8 px-6">
-          {renderWinners()}
+          {/* {renderWinners()} */}
+          <NoWinnerBox />
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

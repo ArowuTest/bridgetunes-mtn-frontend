@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const LifeChangingSectionWrapper = styled.section`
+  position: relative;
+
   .life__changing__section {
     width: 100%;
     position: relative;

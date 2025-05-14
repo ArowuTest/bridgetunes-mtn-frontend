@@ -2,13 +2,20 @@ import { Button, Container, Flex } from "@/src/components/common/styles";
 import { WinnersSectionWrapper } from "./winners-section.styles";
 import translations from "@/src/constants/translations.json";
 import { Counter } from "@/src/components/common/counter";
-import { WinnerCard } from "@/src/components/common/winner-card";
+import {
+  WinnerCard,
+  WinnerCardProps,
+} from "@/src/components/common/winner-card";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import ConfettiBox from "@/src/components/common/confetti-box";
+import { NoWinnerBox } from "@/src/components/common/no-winner-box";
 
 export const WinnersSection = () => {
-  const [winners, setWinners] = useState(translations.landingPage.winnersCards);
+  // const [winners, setWinners] = useState(translations.landingPage.winnersCards);
+  const [winners, setWinners] = useState<any>([]);
   const { push } = useRouter();
+
   return (
     <WinnersSectionWrapper>
       <Flex
@@ -66,23 +73,40 @@ export const WinnersSection = () => {
             gap="40px"
             background="linear-gradient(258.42deg, #000000 -129.38%, #101935 93.71%)"
           >
+            <ConfettiBox
+              gravity={0.1}
+              height={1000}
+              initialVelocityX={2}
+              initialVelocityY={2}
+              numberOfPieces={500}
+              opacity={1}
+              recycle={true}
+              run
+              width={1600}
+              wind={0}
+            />
             <h1 className="global-title">
               {translations.landingPage.winnersPoolText}
             </h1>
-            <Flex
-              direction="row"
-              justify="center"
-              align="center"
-              gap="30px"
-              className="winners__card__wrapper"
-            >
-              {winners.map((card, idx) => (
-                <WinnerCard
-                  card={{ ...card, showConfettiImage: true }}
-                  key={idx}
-                />
-              ))}
-            </Flex>
+            {winners.length < 1 ? (
+              <NoWinnerBox />
+            ) : (
+              <Flex
+                direction="row"
+                justify="center"
+                align="center"
+                gap="30px"
+                className="winners__card__wrapper"
+              >
+                {winners.map((card: any, idx: number) => (
+                  <WinnerCard
+                    card={{ ...card, showConfettiImage: true }}
+                    key={idx}
+                  />
+                ))}
+              </Flex>
+            )}
+
             <Button
               padding="0.5rem 5rem"
               fontSize="0.9rem"
