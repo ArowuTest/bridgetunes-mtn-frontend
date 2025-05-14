@@ -1,8 +1,11 @@
-import { motion } from "framer-motion"
-import { PatternBG } from "@/src/components/common/pattern-bg"
-import { WinnerTable } from "./winners-table"
+import { motion } from "framer-motion";
+import { PatternBG } from "@/src/components/common/pattern-bg";
+import { WinnerTable } from "./winners-table";
+import { NoWinnerBox } from "@/src/components/common/no-winner-box";
+import { useState } from "react";
 
 export const WinnersList = () => {
+  const [isListEmpty, _] = useState(true);
   return (
     <PatternBG className="px-6 py-20 md:py-28">
       <motion.div
@@ -22,9 +25,19 @@ export const WinnersList = () => {
         </p>
       </motion.div>
 
-      <div className="max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-[80%] mx-auto py-8 px-6">
-        <WinnerTable />
+      <div
+        className={`${
+          isListEmpty ? "flex justify-center" : ""
+        } max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-[80%] mx-auto py-8 px-6`}
+      >
+        {isListEmpty ? (
+          <div className="max-w-2xl flex justify-center items-center">
+            <NoWinnerBox />
+          </div>
+        ) : (
+          <WinnerTable />
+        )}
       </div>
     </PatternBG>
-  )
-}
+  );
+};

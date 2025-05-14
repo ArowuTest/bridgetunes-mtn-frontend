@@ -45,11 +45,13 @@ const LoginBanner = styled.img`
   top: 0px;
   bottom: 0px;
   z-index: 1;
+  height: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     top: -110px;
+    height: fit-content;
   }
 `;
 
