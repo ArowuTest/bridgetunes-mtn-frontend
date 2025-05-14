@@ -4,7 +4,10 @@ import { WinnerStructureTable } from "./winner-structure-table"
 
 export const HowWeSelectWinners = () => {
   return (
-    <section className="py-16 px-6 bg-[#090F21] text-center">
+    <section
+      className="py-16 px-6 bg-[#090F21] text-center"
+      id="how-we-select-winners"
+    >
       <motion.div
         className="flex flex-col justify-center items-center text-left p-8"
         initial={{ opacity: 0, scale: 0.8 }}

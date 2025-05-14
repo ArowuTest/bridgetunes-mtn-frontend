@@ -290,7 +290,7 @@ export const LoginScreen = () => {
           </InputGroup>
         </FormGroup>
 
-        {phoneVerificationSent && (
+        {!phoneVerificationSent && (
           <>
             <FormGroup>
               <Label>Verification Code</Label>

@@ -84,6 +84,26 @@ export const FaqBox = ({
           <ReactMarkdown
             components={{
               p: ({ children }) => <div className="content">{children}</div>,
+              a: ({ href, children }) => (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "#FFCC00",
+                    color: "#fff",
+                    fontWeight: "500",
+                    padding: "8px",
+                    borderRadius: "8px",
+                    textDecoration: "none",
+                    fontSize: ".8rem",
+                    marginTop: "10px",
+                    display: "block",
+                  }}
+                >
+                  {children}
+                </a>
+              ),
             }}
           >
             {content.content}
