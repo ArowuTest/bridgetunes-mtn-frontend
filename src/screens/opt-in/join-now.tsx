@@ -39,7 +39,7 @@ export const JoinNow = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex flex-col mb-6 mx-auto items-center w-full">
-              <p className="text-sm mb-2 text-black">You Can Also Opt-In By:</p>
+              <p className="text-sm mb-2 text-black">You Can Opt-In By:</p>
               <div className="w-fit flex flex-col md:flex-row  justify-center items-center gap-4 md:gap-12">
                 {steps.map((step, idx) => (
                   <div className="w-fit flex flex-start items-center">
