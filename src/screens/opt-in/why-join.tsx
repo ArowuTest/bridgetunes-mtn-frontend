@@ -12,7 +12,7 @@ export const WhyJoin = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        Why Join MyNumba Don Win?
+        Why Join MTN Mega Billion Promo?
       </motion.h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -63,5 +63,5 @@ export const WhyJoin = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};

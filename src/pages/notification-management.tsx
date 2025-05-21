@@ -32,7 +32,7 @@ const NotificationManagement: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Notification Management | MTN One Billion MAD Promo</title>
+        <title>Notification Management | MTN Mega Billion Promo</title>
       </Head>
 
       <NotificationContainer>

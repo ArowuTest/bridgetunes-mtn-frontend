@@ -3,17 +3,18 @@ import { joinSteps } from "./data"
 import React from "react"
 import classNames from "classnames"
 import { motion } from "framer-motion"
+import parse from "html-react-parser";
 
 export const SimpleSteps = () => {
   return (
-    <PatternBG className="px-6 py-20 md:py-36">
+    <PatternBG className="px-6 py-20 md:py-32">
       <motion.h2
         className="text-xl sm:text-2xl md:text-3xl font-semibold mb-16 text-gray-200"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        "Join MyNumba Don Win In 3 Simple Steps"
+        "Join MTN Mega Billion Promo In 3 Simple Steps"
       </motion.h2>
 
       <div className="flex flex-col sm:flex-row justify-between gap-6 md:gap-4 max-w-5xl mx-auto">
@@ -33,7 +34,9 @@ export const SimpleSteps = () => {
               <h3 className="text-yellow-400/80 font-bold mt-5">
                 {step.title}
               </h3>
-              <p className="text-sm text-gray-400 max-w-xs mt-2">{step.desc}</p>
+              <p className="text-sm text-gray-400 max-w-xs mt-2">
+                {parse(step.desc)}
+              </p>
             </motion.div>
 
             {idx < joinSteps.length - 1 && (
@@ -65,5 +68,5 @@ export const SimpleSteps = () => {
         ))}
       </div>
     </PatternBG>
-  )
-}
+  );
+};

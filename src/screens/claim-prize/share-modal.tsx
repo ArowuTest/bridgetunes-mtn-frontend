@@ -32,8 +32,8 @@ export const ShareModal = ({ open, handleClose }: ShareModalProps) => {
             <h2 className="text-lg font-semibold mb-8">Share your joy</h2>
 
             <div className="bg-gray-800 rounded-md p-3 text-sm text-white mb-5">
-              "I just won ₦[Amount] in the MTN One Billion MAD Promo! You could
-              be next! #MyNumbaDonWin #MTNNigeria"
+              "I just won ₦[Amount] in the MTN Mega Billion Promo! You could be
+              next! #MyNumbaDonWin #MTNNigeria"
             </div>
 
             <div className="flex items-center gap-2 md:gap-4 text-center text-sm pt-4 justify-around">

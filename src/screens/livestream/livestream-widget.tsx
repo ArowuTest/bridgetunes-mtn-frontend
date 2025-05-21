@@ -35,7 +35,7 @@ export const LivestreamWidget = () => {
         <div className="flex flex-col items-center">
           <div className="flex flex-col items-start w-full">
             <h2 className="mt-4 text-lg font-semibold text-gray-300">
-              MTN One Billion MAD Promo Live Draw
+              MTN Mega Billion Promo Live Draw
             </h2>
             <p className="text-sm text-gray-500">
               Click to watch our latest live draw session

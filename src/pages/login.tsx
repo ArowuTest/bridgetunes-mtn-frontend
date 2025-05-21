@@ -7,7 +7,7 @@ const Login: React.FC = () => {
   return (
     <AuthLayout>
       <Head>
-        <title>Login | MTN One Billion MAD Promo</title>
+        <title>Login | MTN Mega Billion Promo</title>
       </Head>
 
       <LoginScreen />

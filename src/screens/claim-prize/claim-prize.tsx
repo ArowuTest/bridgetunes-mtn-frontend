@@ -9,7 +9,7 @@ import { StepTwo } from "./step-2"
 import { StepThree } from "./step-3"
 
 export const ClaimPrizeScreen = () => {
-  const [active, setActive] = useState("step-1")
+  const [active, setActive] = useState("step-1");
 
   const renderSteps = () => {
     let stepToShow

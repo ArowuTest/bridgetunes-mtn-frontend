@@ -4,116 +4,77 @@ import { motion } from "framer-motion"
 import { userAPI } from "@/src/network/api";
 
 export const JoinNow = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [formattedPhone, setFormattedPhone] = useState("");
   const [agreeToTerms, setAgreeToTerms] = useState(false);
-
-  const handleOptIn = async () => {
-    let value = "";
-    if (phoneNumber.trim().startsWith("+")) {
-      value = phoneNumber.replaceAll(" ", "").slice(1);
-    } else {
-      value = phoneNumber.replaceAll(" ", "");
-    }
-
-    try {
-      const result = await userAPI.optIn(value);
-      console.log(result);
-    } catch (error: any) {
-      console.log(error);
-    }
-  };
+  const steps = [
+    `Sending "JOIN" to 5050`,
+    `Dialing *123*1#`,
+    `Using the MyMTN app`,
+  ];
 
   return (
-    <section className="bg-[#0B0D24] py-20 px-6 text-white">
-      <motion.div
-        className="text-center mb-8"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-xl md:text-3xl font-semibold mb-2">
-          Welcome To MyNumba Don Win!
-        </h2>
-        <p className="text-gray-400 text-sm">
-          Opt-In by entering your MTN phone number below
-        </p>
-      </motion.div>
+    <section className="text-white overflow-hidden relative">
+      <div className="w-full text-center bg-[url('/images/prizes/yellow-shine.jpg')] bg-no-repeat bg-cover bg-center bg-[#FFCC08] py-24 flex flex-col items-center justify-center px-2 md:px-0">
+        <div className="absolute inset-0 bg-[url('/images/prizes/yellow-shine.jpg')] bg-no-repeat bg-cover bg-center opacity-90"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center w-full gap-10">
+          <motion.div
+            className="text-center border-b border-black w-fit"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1
+              style={{ fontFamily: "Montserrat" }}
+              className="text-xl md:text-3xl font-bold mb-2 text-black"
+            >
+              Welcome To MTN Mega Billion Promo!
+            </h1>
+            <p className="text-black text-sm pb-4">MyNumba Don Win!</p>
+          </motion.div>
+          <motion.div
+            className="mx-auto text-center w-full"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex flex-col mb-6 mx-auto items-center w-full">
+              <p className="text-sm mb-2 text-black">You Can Also Opt-In By:</p>
+              <div className="w-fit flex flex-col md:flex-row  justify-center items-center gap-4 md:gap-12">
+                {steps.map((step, idx) => (
+                  <div className="w-fit flex flex-start items-center">
+                    <p className="bg-white text-[#FFCC08] py-3.5 px-2.5 rounded-lg">
+                      {idx + 1}
+                    </p>
+                    <p className="bg-black py-2.5 px-3 text-sm rounded-lg">
+                      {step}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm mt-5 text-black">
+                <a
+                  className="underline text-black cursor-pointer hover:text-black/80"
+                  href="/terms-and-conditions"
+                >
+                  Terms and conditions
+                </a>{" "}
+                apply
+              </p>
+            </div>
+          </motion.div>
+          <div className="relative w-fit max-w-[85%] md:max-w-full">
+            {/* Black moon-shaped left border */}
+            <div className="absolute left-0 top-0 h-full w-10 bg-transparent rounded-l-full z-10 border-l-8 border-black"></div>
 
-      <motion.div
-        className="max-w-md mx-auto text-center"
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="mb-6">
-          <label className="block text-yellow-400 mb-2">
-            Phone Number (MTN)
-          </label>
-          <input
-            type="tel"
-            className="w-full bg-gray-800/80 border border-gray-800/50 rounded py-3 px-4 text-white placeholder-gray-500"
-            maxLength={18}
-            placeholder="234 081 300 000 00"
-            value={formattedPhone}
-            onChange={(e) => {
-              const raw = e.target.value.replace(/\D/g, "");
-              const formatted = formatPhone(raw);
-              setPhoneNumber(e.target.value.trim());
-              setFormattedPhone(formatted);
-            }}
-          />
-          <p className="text-gray-500 text-xs mt-2">
-            Enter Your MTN Number in format: 080XXXXXXXX Or 234XXXXXXXXXX
-          </p>
+            {/* Main white pill container */}
+            <div className="bg-white text-black font-semibold text-xs md:text-sm text-center px-6 py-2 pl-10 rounded-full relative">
+              Every recharge give you a point, each point represents a ticket
+              entry into the eligible draw
+            </div>
+          </div>
         </div>
-
-        <div className="flex flex-col mb-6 max-w-xs mx-auto items-center">
-          <p className="text-gray-400 text-xs mb-2">You Can Also Opt-In By:</p>
-          <ul className="text-gray-400 text-xs space-y-2 mb-2">
-            <li className="flex items-center">
-              <span className="mr-2">•</span> Sending "JOIN" To 5050
-            </li>
-            <li className="flex items-center">
-              <span className="mr-2">•</span> Dialing *123*1# And Selecting
-              Option 1
-            </li>
-            <li className="flex items-center">
-              <span className="mr-2">•</span> Using The MyMTN App
-            </li>
-          </ul>
-        </div>
-
-        <div className="w-full flex items-center justify-center mb-6">
-          <input
-            type="checkbox"
-            id="terms"
-            className="mr-2 w-fit"
-            checked={agreeToTerms}
-            onChange={() => setAgreeToTerms(!agreeToTerms)}
-          />
-          <label htmlFor="terms" className="text-xs text-gray-400">
-            I agree to{" "}
-            <span className="cursor-pointer underline underline-offset-2">
-              Terms
-            </span>{" "}
-            and{" "}
-            <span className="cursor-pointer underline underline-offset-2">
-              Privacy Statement
-            </span>
-          </label>
-        </div>
-
-        <button
-          className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-4 rounded"
-          disabled={!agreeToTerms}
-          onClick={() => handleOptIn()}
-        >
-          Join Now
-        </button>
-      </motion.div>
+      </div>
     </section>
   );
 };

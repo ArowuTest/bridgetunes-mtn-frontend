@@ -7,10 +7,10 @@ const ClaimPrizePage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Claim Prize | MTN One Billion MAD Promo</title>
+        <title>Claim Prize | MTN Mega Billion Promo</title>
         <meta
           name="description"
-          content="Here's how to claim your prize on the MTN One Billion MAD Promo."
+          content="Here's how to claim your prize on the MTN Mega Billion Promo."
         />
       </Head>
 

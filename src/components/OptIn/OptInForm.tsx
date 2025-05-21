@@ -150,7 +150,7 @@ const OptInForm: React.FC = () => {
 
   return (
     <OptInContainer>
-      <CardTitle>Opt-In to MTN One Billion MAD Promo</CardTitle>
+      <CardTitle>Opt-In to MTN Mega Billion Promo</CardTitle>
 
       {!success && !failure ? (
         <>

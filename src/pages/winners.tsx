@@ -7,10 +7,10 @@ const WinnersPage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Winners | MTN One Billion MAD Promo</title>
+        <title>Winners | MTN Mega Billion Promo</title>
         <meta
           name="description"
-          content="Meet the lucky winners of the MTN One Billion MAD Promo."
+          content="Meet the lucky winners of the MTN Mega Billion Promo."
         />
       </Head>
 

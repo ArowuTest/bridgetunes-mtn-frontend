@@ -163,7 +163,7 @@ const TemplateForm: React.FC = () => {
             id="content"
             value={content}
             onChange={(e) => setContent(e.target.value)}
-            placeholder="e.g., Congratulations {name}! You've won {amount} in the MTN One Billion MAD Promo draw on {date}."
+            placeholder="e.g., Congratulations {name}! You've won {amount} in the MTN Mega Billion Promo draw on {date}."
             disabled={isSubmitting}
           />
         </FormGroup>

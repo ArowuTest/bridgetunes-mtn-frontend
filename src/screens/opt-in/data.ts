@@ -7,7 +7,7 @@ export const joinSteps = [
   {
     icon: "/images/step2.png",
     title: "Step 2:",
-    desc: "Recharge your MTN line, understand how points work and how to maximise your chances.",
+    desc: "Recharge your MTN line, understand how points work and how to maximise your chances <a className='text-yellow-400/80' href='/prizes#how-we-select-winners'>here</a>.",
   },
   {
     icon: "/images/step3.png",

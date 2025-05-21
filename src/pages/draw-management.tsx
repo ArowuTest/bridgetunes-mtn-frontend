@@ -63,7 +63,7 @@ const DrawManagement: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Draw Management | MTN One Billion MAD Promo</title>
+        <title>Draw Management | MTN Mega Billion Promo</title>
       </Head>
 
       <DrawManagementContainer>

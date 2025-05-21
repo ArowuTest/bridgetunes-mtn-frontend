@@ -7,7 +7,7 @@ const DrawCalendar = () => {
   return (
     <Layout>
       <Head>
-        <title>Draw Calendar | MTN One Billion MAD Promo</title>
+        <title>Draw Calendar | MTN Mega Billion Promo</title>
       </Head>
 
       <DrawCalendarScreen />

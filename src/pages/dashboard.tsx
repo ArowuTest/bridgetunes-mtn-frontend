@@ -7,7 +7,7 @@ const Dashboard: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Dashboard | MTN One Billion MAD Promo</title>
+        <title>Dashboard | MTN Mega Billion Promo</title>
       </Head>
 
       <DashboardScreen />

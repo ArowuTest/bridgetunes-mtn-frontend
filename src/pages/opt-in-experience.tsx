@@ -7,7 +7,7 @@ const OptInPage: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Opt-In Experience | MTN One Billion MAD Promo</title>
+        <title>Opt-In Experience | MTN Mega Billion Promo</title>
       </Head>
 
       <OptInScreen />

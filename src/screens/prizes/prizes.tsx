@@ -42,10 +42,10 @@ export const PrizesScreen = () => {
             </h2>
 
             <p className="text-white/80 text-sm md:text-md mt-6 text-left">
-              MTN One Billion MAD Promo offers substantial cash prizes through
-              our daily and weekly draws. Our prize structure is designed to
-              reward as many participants as possible, with different prize
-              tiers and special Saturday draws with even higher prize amounts.
+              MTN Mega Billion Promo offers substantial cash prizes through our
+              daily and weekly draws. Our prize structure is designed to reward
+              as many participants as possible, with different prize tiers and
+              special Saturday draws with even higher prize amounts.
             </p>
           </motion.div>
         </motion.div>

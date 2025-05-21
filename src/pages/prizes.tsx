@@ -6,7 +6,7 @@ const PrizesPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Prizes | MTN One Billion MAD Promo</title>
+        <title>Prizes | MTN Mega Billion Promo</title>
       </Head>
 
       <PrizesScreen />
